@@ -1,13 +1,32 @@
-const sendMail = (req, res) => {
-    const product = req.params.prod;
-    const opening = req.params.opening;
-    const type = req.params.type;
-    const color = req.params.color
+const { ProductRepository } = require('../repository/product.repository');
 
-    const { width, height, quantity } = req.body
+class Controller {
+    #productRepository;
 
-    const finalProduct = { product, opening, type, color, width, height, quantity }
-    res.json(finalProduct);
-}
+    constructor() {
+        this.#productRepository = new ProductRepository();
+    }
 
-export default { sendMail };
+    generateProduct = (req, res) => {
+        try {
+            const type = req.params.type;
+            const openingType = req.params.opening;
+            const openingStyle = req.params.style;
+            const color = req.params.color;
+            const { width, height, quantity } = req.body;
+            console.log(type, openingStyle, openingType, color, width, height, quantity);
+
+            const product = this.#productRepository.generateProduct(type, openingType, openingStyle, color, width, height, quantity);
+            res.status(201).json(product);
+
+        } catch (error) {
+            console.log(error)
+            // res.status(error.status).json(error)
+            res.json('test');
+        };
+    };
+};
+
+
+
+module.exports = { Controller };
