@@ -1,18 +1,24 @@
-import express from 'express';
-import dotenv from 'dotenv';
+require('dotenv').config();
+const express = require('express');
+const mongoose = require('mongoose');
 
-import orderRouter from './routes/order.router.js';
-
-//Cargar variables de entorno
-dotenv.config();
+// Environment
+const port = process.env.PORT || 3000;
+const mongoUrl = process.env.MONGO_URL;
+const dbName = process.env.MONGO_DB;
 
 const app = express();
-const port = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use('/product', orderRouter);
+const main = async () => {
+    await mongoose.connect(mongoUrl, { dbName });
 
-app.listen(port, () => console.log(`Listening on ${port}`));
+    app.listen(port, () => {
+        console.log(`Listening on ${port}`);
+    });
+};
+
+main();
