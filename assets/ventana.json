@@ -1,0 +1,269 @@
+[
+    {
+        "id": 1,
+        "opening": "corrediza",
+        "color": "nogal"
+    },
+    {
+        "id": 2,
+        "opening": "corrediza",
+        "color": "roble"
+    },
+    {
+        "id": 3,
+        "opening": "corrediza",
+        "color": "liso"
+    },
+    {
+        "id": 4,
+        "opening": "interior",
+        "style": "batiente",
+        "type": "combinada superpuesta",
+        "color": "nogal"
+    },
+    {
+        "id": 5,
+        "opening": "interior",
+        "style": "batiente",
+        "type": "combinada superpuesta",
+        "color": "roble"
+    },
+    {
+        "id": 6,
+        "opening": "interior",
+        "style": "batiente",
+        "type": "combinada superpuesta",
+        "color": "liso"
+    },
+    {
+        "id": 7,
+        "opening": "interior",
+        "style": "batiente",
+        "type": "simple",
+        "color": "nogal"
+    },
+    {
+        "id": 8,
+        "opening": "interior",
+        "style": "batiente",
+        "type": "simple",
+        "color": "roble"
+    },
+    {
+        "id": 9,
+        "opening": "interior",
+        "style": "batiente",
+        "type": "simple",
+        "color": "liso"
+    },
+    {
+        "id": 10,
+        "opening": "interior",
+        "style": "batiente",
+        "type": "combinada lateral",
+        "color": "nogal"
+    },
+    {
+        "id": 11,
+        "opening": "interior",
+        "style": "batiente",
+        "type": "combinada lateral",
+        "color": "roble"
+    },
+    {
+        "id": 12,
+        "opening": "interior",
+        "style": "batiente",
+        "type": "combinada lateral",
+        "color": "liso"
+    },
+    {
+        "id": 13,
+        "opening": "interior",
+        "style": "oscilobatiente",
+        "type": "simple",
+        "color": "nogal"
+    },
+    {
+        "id": 14,
+        "opening": "interior",
+        "style": "oscilobatiente",
+        "type": "simple",
+        "color": "roble"
+    },
+    {
+        "id": 15,
+        "opening": "interior",
+        "style": "oscilobatiente",
+        "type": "simple",
+        "color": "liso"
+    },
+    {
+        "id": 16,
+        "opening": "interior",
+        "style": "oscilobatiente",
+        "type": "combinada lateral",
+        "color": "nogal"
+    },
+    {
+        "id": 17,
+        "opening": "interior",
+        "style": "oscilobatiente",
+        "type": "combinada lateral",
+        "color": "roble"
+    },
+    {
+        "id": 18,
+        "opening": "interior",
+        "style": "oscilobatiente",
+        "type": "combinada lateral",
+        "color": "liso"
+    },
+    {
+        "id": 19,
+        "opening": "interior",
+        "style": "banderola",
+        "type": "simple",
+        "color": "nogal"
+    },
+    {
+        "id": 20,
+        "opening": "interior",
+        "style": "banderola",
+        "type": "simple",
+        "color": "roble"
+    },
+    {
+        "id": 21,
+        "opening": "interior",
+        "style": "banderola",
+        "type": "simple",
+        "color": "liso"
+    },
+    {
+        "id": 22,
+        "opening": "interior",
+        "style": "banderola",
+        "type": "combinada lateral",
+        "color": "nogal"
+    },
+    {
+        "id": 23,
+        "opening": "interior",
+        "style": "banderola",
+        "type": "combinada lateral",
+        "color": "roble"
+    },
+    {
+        "id": 24,
+        "opening": "interior",
+        "style": "banderola",
+        "type": "combinada lateral",
+        "color": "liso"
+    },
+    {
+        "id": 25,
+        "opening": "exterior",
+        "style": "upper",
+        "type": "combinada superpuesta",
+        "color": "nogal"
+    },
+    {
+        "id": 26,
+        "opening": "exterior",
+        "style": "upper",
+        "type": "combinada superpuesta",
+        "color": "roble"
+    },
+    {
+        "id": 27,
+        "opening": "exterior",
+        "style": "upper",
+        "type": "combinada superpuesta",
+        "color": "lisa"
+    },
+    {
+        "id": 28,
+        "opening": "exterior",
+        "style": "upper",
+        "type": "simple",
+        "color": "nogal"
+    },
+    {
+        "id": 29,
+        "opening": "exterior",
+        "style": "upper",
+        "type": "simple",
+        "color": "roble"
+    },
+    {
+        "id": 30,
+        "opening": "exterior",
+        "style": "upper",
+        "type": "simple",
+        "color": "lisa"
+    },
+    {
+        "id": 31,
+        "opening": "exterior",
+        "style": "upper",
+        "type": "combinada lateral",
+        "color": "nogal"
+    },
+    {
+        "id": 32,
+        "opening": "exterior",
+        "style": "upper",
+        "type": "combinada lateral",
+        "color": "roble"
+    },
+    {
+        "id": 33,
+        "opening": "exterior",
+        "style": "upper",
+        "type": "combinada lateral",
+        "color": "lisa"
+    },
+    {
+        "id": 34,
+        "opening": "exterior",
+        "style": "upper",
+        "type": "combinada lateral superpuesta",
+        "color": "nogal"
+    },
+    {
+        "id": 35,
+        "opening": "exterior",
+        "style": "upper",
+        "type": "combinada lateral superpuesta",
+        "color": "roble"
+    },
+    {
+        "id": 36,
+        "opening": "exterior",
+        "style": "upper",
+        "type": "combinada lateral superpuesta",
+        "color": "lisa"
+    },
+    {
+        "id": 37,
+        "opening": "exterior",
+        "style": "upper",
+        "type": "doble superpuesta",
+        "color": "nogal"
+    },
+    {
+        "id": 38,
+        "opening": "exterior",
+        "style": "upper",
+        "type": "doble superpuesta",
+        "color": "roble"
+    },
+    {
+        "id": 39,
+        "opening": "exterior",
+        "style": "upper",
+        "type": "doble superpuesta",
+        "color": "lisa"
+    }
+]
