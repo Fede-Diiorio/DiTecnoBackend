@@ -7,6 +7,15 @@ class Controller {
         this.#productRepository = new ProductRepository();
     }
 
+    getProducts = (res) => {
+        try {
+            const product = this.#productRepository.getProducts();
+            res.json(product);
+        } catch (error) {
+            res.status(500).json(error);
+        }
+    }
+
     generateProduct = (req, res) => {
         try {
             const type = req.params.type;

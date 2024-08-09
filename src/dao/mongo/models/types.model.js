@@ -11,4 +11,4 @@ const schema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('colors', schema);
+module.exports = mongoose.model('types', schema);

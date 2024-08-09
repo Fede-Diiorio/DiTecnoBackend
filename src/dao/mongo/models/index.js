@@ -1,4 +1,8 @@
 module.exports = {
-    Products: require('./products.model'),
     Orders: require('./orders.model'),
+    Colors: require('./colors.model'),
+    Opening: require('./opening.model'),
+    Products: require('./products.model'),
+    Styles: require('./styles.model'),
+    Types: require('./types.model')
 }
