@@ -1,3 +1,0 @@
-class orderRepository {
-    constructor()
-}

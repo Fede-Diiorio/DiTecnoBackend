@@ -11,4 +11,4 @@ const schema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('opening', schema);
+module.exports = mongoose.model('Opening', schema, 'opening');

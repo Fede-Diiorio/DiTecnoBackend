@@ -11,4 +11,4 @@ const schema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('styles', schema);
+module.exports = mongoose.model('Styles', schema, 'styles');
