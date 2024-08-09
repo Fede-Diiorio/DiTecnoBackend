@@ -1,269 +1,299 @@
 [
     {
-        "id": 1,
+        "product": "ventana",
         "opening": "corrediza",
         "color": "nogal"
     },
     {
-        "id": 2,
+        "product": "ventana",
         "opening": "corrediza",
         "color": "roble"
     },
     {
-        "id": 3,
+        "product": "ventana",
         "opening": "corrediza",
         "color": "liso"
     },
     {
-        "id": 4,
+        "product": "ventana",
         "opening": "interior",
         "style": "batiente",
         "type": "combinada superpuesta",
         "color": "nogal"
     },
     {
-        "id": 5,
+        "product": "ventana",
         "opening": "interior",
         "style": "batiente",
         "type": "combinada superpuesta",
         "color": "roble"
     },
     {
-        "id": 6,
+        "product": "ventana",
         "opening": "interior",
         "style": "batiente",
         "type": "combinada superpuesta",
         "color": "liso"
     },
     {
-        "id": 7,
+        "product": "ventana",
         "opening": "interior",
         "style": "batiente",
         "type": "simple",
         "color": "nogal"
     },
     {
-        "id": 8,
+        "product": "ventana",
         "opening": "interior",
         "style": "batiente",
         "type": "simple",
         "color": "roble"
     },
     {
-        "id": 9,
+        "product": "ventana",
         "opening": "interior",
         "style": "batiente",
         "type": "simple",
         "color": "liso"
     },
     {
-        "id": 10,
+        "product": "ventana",
         "opening": "interior",
         "style": "batiente",
         "type": "combinada lateral",
         "color": "nogal"
     },
     {
-        "id": 11,
+        "product": "ventana",
         "opening": "interior",
         "style": "batiente",
         "type": "combinada lateral",
         "color": "roble"
     },
     {
-        "id": 12,
+        "product": "ventana",
         "opening": "interior",
         "style": "batiente",
         "type": "combinada lateral",
         "color": "liso"
     },
     {
-        "id": 13,
+        "product": "ventana",
         "opening": "interior",
         "style": "oscilobatiente",
         "type": "simple",
         "color": "nogal"
     },
     {
-        "id": 14,
+        "product": "ventana",
         "opening": "interior",
         "style": "oscilobatiente",
         "type": "simple",
         "color": "roble"
     },
     {
-        "id": 15,
+        "product": "ventana",
         "opening": "interior",
         "style": "oscilobatiente",
         "type": "simple",
         "color": "liso"
     },
     {
-        "id": 16,
+        "product": "ventana",
         "opening": "interior",
         "style": "oscilobatiente",
         "type": "combinada lateral",
         "color": "nogal"
     },
     {
-        "id": 17,
+        "product": "ventana",
         "opening": "interior",
         "style": "oscilobatiente",
         "type": "combinada lateral",
         "color": "roble"
     },
     {
-        "id": 18,
+        "product": "ventana",
         "opening": "interior",
         "style": "oscilobatiente",
         "type": "combinada lateral",
         "color": "liso"
     },
     {
-        "id": 19,
+        "product": "ventana",
         "opening": "interior",
         "style": "banderola",
         "type": "simple",
         "color": "nogal"
     },
     {
-        "id": 20,
+        "product": "ventana",
         "opening": "interior",
         "style": "banderola",
         "type": "simple",
         "color": "roble"
     },
     {
-        "id": 21,
+        "product": "ventana",
         "opening": "interior",
         "style": "banderola",
         "type": "simple",
         "color": "liso"
     },
     {
-        "id": 22,
+        "product": "ventana",
         "opening": "interior",
         "style": "banderola",
         "type": "combinada lateral",
         "color": "nogal"
     },
     {
-        "id": 23,
+        "product": "ventana",
         "opening": "interior",
         "style": "banderola",
         "type": "combinada lateral",
         "color": "roble"
     },
     {
-        "id": 24,
+        "product": "ventana",
         "opening": "interior",
         "style": "banderola",
         "type": "combinada lateral",
         "color": "liso"
     },
     {
-        "id": 25,
+        "product": "ventana",
         "opening": "exterior",
-        "style": "upper",
+        "style": "proyectante",
         "type": "combinada superpuesta",
         "color": "nogal"
     },
     {
-        "id": 26,
+        "product": "ventana",
         "opening": "exterior",
-        "style": "upper",
+        "style": "proyectante",
         "type": "combinada superpuesta",
         "color": "roble"
     },
     {
-        "id": 27,
+        "product": "ventana",
         "opening": "exterior",
-        "style": "upper",
+        "style": "proyectante",
         "type": "combinada superpuesta",
         "color": "lisa"
     },
     {
-        "id": 28,
+        "product": "ventana",
         "opening": "exterior",
-        "style": "upper",
+        "style": "proyectante",
         "type": "simple",
         "color": "nogal"
     },
     {
-        "id": 29,
+        "product": "ventana",
         "opening": "exterior",
-        "style": "upper",
+        "style": "proyectante",
         "type": "simple",
         "color": "roble"
     },
     {
-        "id": 30,
+        "product": "ventana",
         "opening": "exterior",
-        "style": "upper",
+        "style": "proyectante",
         "type": "simple",
         "color": "lisa"
     },
     {
-        "id": 31,
+        "product": "ventana",
         "opening": "exterior",
-        "style": "upper",
+        "style": "proyectante",
         "type": "combinada lateral",
         "color": "nogal"
     },
     {
-        "id": 32,
+        "product": "ventana",
         "opening": "exterior",
-        "style": "upper",
+        "style": "proyectante",
         "type": "combinada lateral",
         "color": "roble"
     },
     {
-        "id": 33,
+        "product": "ventana",
         "opening": "exterior",
-        "style": "upper",
+        "style": "proyectante",
         "type": "combinada lateral",
         "color": "lisa"
     },
     {
-        "id": 34,
+        "product": "ventana",
         "opening": "exterior",
-        "style": "upper",
+        "style": "proyectante",
         "type": "combinada lateral superpuesta",
         "color": "nogal"
     },
     {
-        "id": 35,
+        "product": "ventana",
         "opening": "exterior",
-        "style": "upper",
+        "style": "proyectante",
         "type": "combinada lateral superpuesta",
         "color": "roble"
     },
     {
-        "id": 36,
+        "product": "ventana",
         "opening": "exterior",
-        "style": "upper",
+        "style": "proyectante",
         "type": "combinada lateral superpuesta",
         "color": "lisa"
     },
     {
-        "id": 37,
+        "product": "ventana",
         "opening": "exterior",
-        "style": "upper",
+        "style": "proyectante",
         "type": "doble superpuesta",
         "color": "nogal"
     },
     {
-        "id": 38,
+        "product": "ventana",
         "opening": "exterior",
-        "style": "upper",
+        "style": "proyectante",
         "type": "doble superpuesta",
         "color": "roble"
     },
     {
-        "id": 39,
+        "product": "ventana",
         "opening": "exterior",
-        "style": "upper",
+        "style": "proyectante",
         "type": "doble superpuesta",
         "color": "lisa"
+    },
+    {
+        "product": "puerta",
+        "opening": "interior",
+        "color": "nogal"
+    },
+    {
+        "product": "puerta",
+        "opening": "interior",
+        "color": "roble"
+    },
+    {
+        "product": "puerta",
+        "opening": "interior",
+        "color": "liso"
+    },
+    {
+        "product": "puerta",
+        "opening": "exterior",
+        "color": "nogal"
+    },
+    {
+        "product": "puerta",
+        "opening": "exterior",
+        "color": "roble"
+    },
+    {
+        "product": "puerta",
+        "opening": "exterior",
+        "color": "liso"
     }
 ]

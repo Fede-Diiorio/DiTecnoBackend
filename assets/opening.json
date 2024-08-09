@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Apertura hacia afuera",
+        "slug": "exterior"
+    },
+    {
+        "name": "Apertura  hacia adentro",
+        "slug": "interior"
+    },
+    {
+        "name": "Apertura corrediza",
+        "slug": "corrediza"
+    }
+]

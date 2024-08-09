@@ -1,12 +1,19 @@
 import mongoose from 'mongoose';
 
 const schema = new mongoose.Schema({
+    product: {
+        type: String,
+        enum: ['puerta', 'ventana'],
+        required: true
+    },
     opening: {
         type: String,
         required: true,
+        enum: ['interior', 'exterior', 'corrediza']
     },
     style: {
         type: String,
+        enum: ['batiente', 'oscilobatiente', 'banderola', 'upper']
     },
     type: {
         type: String,
@@ -14,6 +21,7 @@ const schema = new mongoose.Schema({
     color: {
         type: String,
         required: true,
+        enum: ['nogal', 'roble', 'liso']
     },
     width: {
         type: Number,
@@ -30,6 +38,6 @@ const schema = new mongoose.Schema({
     },
 });
 
-const Product = mongoose.model('Window', schema);
+const Product = mongoose.model('Products', schema);
 
 export default Product;
