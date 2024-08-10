@@ -26,11 +26,23 @@ class Controller {
         };
     };
 
+    async getColors(req, res) {
+        try {
+            const product = req.params.product;
+            const opening = req.params.opening;
+            const colors = await this.#productRepository.getColors(product, opening);
+            res.json(colors);
+        } catch (error) {
+            res.status(error.status || 500).json(error);
+        };
+    };
+
     async getStyles(req, res) {
         try {
             const product = req.params.product;
             const opening = req.params.opening;
-            const openingStyle = await this.#productRepository.getOpeningStyles(product, opening);
+            const color = req.params.color;
+            const openingStyle = await this.#productRepository.getOpeningStyles(product, opening, color);
             res.json(openingStyle);
         } catch (error) {
             res.status(error.status || 500).json(error);
@@ -41,20 +53,10 @@ class Controller {
         try {
             const product = req.params.product;
             const opening = req.params.opening;
+            const color = req.params.color;
             const style = req.params.style;
-            const type = await this.#productRepository.getTypes(product, opening, style);
+            const type = await this.#productRepository.getTypes(product, opening, color, style);
             res.json(type);
-        } catch (error) {
-            res.status(error.status || 500).json(error);
-        };
-    };
-
-    async getColors(req, res) {
-        try {
-            const product = req.params.product;
-            const opening = req.params.opening;
-            const style = req.params.style;
-            res.json({ product, opening, style });
         } catch (error) {
             res.status(error.status || 500).json(error);
         };

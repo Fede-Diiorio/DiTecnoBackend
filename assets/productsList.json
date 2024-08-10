@@ -1,6 +1,21 @@
 [
     {
         "product": "ventana",
+        "opening": "fija",
+        "color": "nogal"
+    },
+    {
+        "product": "ventana",
+        "opening": "fija",
+        "color": "roble"
+    },
+    {
+        "product": "ventana",
+        "opening": "fija",
+        "color": "liso"
+    },
+    {
+        "product": "ventana",
         "opening": "corrediza",
         "color": "nogal"
     },
