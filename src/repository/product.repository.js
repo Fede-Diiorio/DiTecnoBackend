@@ -97,6 +97,23 @@ class ProductRepository {
     async getTypes(product, opening, style) {
         try {
 
+            const types = await this.#typesDao.getTypes();
+            const typesPayload = types.map(i => new SpecificationDTO(i));
+
+            if (product === 'ventana' && opening === 'interior' && style === 'batiente') {
+                const validType = typesPayload.filter(i => i.slug !== 'lateralSuperpuesta' && i.slug !== 'dobleSuperpuesta');
+                return validType;
+            };
+
+            if (product === 'ventana' && opening === 'interior' && (style === 'oscilobatiente' || style === 'banderola')) {
+                const validType = typesPayload.filter(i => i.slug !== 'lateralSuperpuesta' && i.slug !== 'dobleSuperpuesta' && i.slug !== 'superpuesta');
+                return validType;
+            };
+
+            if (product === 'ventana' && opening === 'exterior' && style === 'proyectante') {
+                return typesPayload;
+            };
+
         } catch (error) {
             throw CustomError.createError({
                 name: error.name || 'Error en la base de datos.',

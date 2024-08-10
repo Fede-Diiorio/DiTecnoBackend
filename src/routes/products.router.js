@@ -9,6 +9,6 @@ router.get('/:product', validateProduct, (req, res) => new Controller().getOpeni
 
 router.get('/:product/:opening', validateProduct, validateOpening, (req, res) => new Controller().getStyles(req, res));
 
-router.get('/:product/:opening/:style', validateProduct, validateOpening, validateOpeningStyle, (req, res) => new Controller().getColors(req, res));
+router.get('/:product/:opening/:style', validateProduct, validateOpening, validateOpeningStyle, (req, res) => new Controller().getTypes(req, res));
 
 module.exports = { router };
