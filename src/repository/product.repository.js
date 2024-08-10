@@ -2,6 +2,7 @@ const { CustomError } = require('../utils/customErrors');
 const { ProductsDao } = require('../dao/mongo/products.dao');
 const { OpeningDao } = require('../dao/mongo/opening.dao');
 const { StylesDao } = require('../dao/mongo/styles.dao');
+const { TypesDao } = require('../dao/mongo/types.dao');
 const { SpecificationDTO } = require('../dto/specifications.dto');
 
 class ProductRepository {
@@ -9,11 +10,13 @@ class ProductRepository {
     #productDao;
     #openingDao;
     #stylesDao;
+    #typesDao;
 
     constructor() {
         this.#productDao = new ProductsDao();
         this.#openingDao = new OpeningDao();
         this.#stylesDao = new StylesDao();
+        this.#typesDao = new TypesDao();
     }
 
     async getProducts() {
@@ -71,17 +74,29 @@ class ProductRepository {
             const openingStyles = await this.#stylesDao.getStyles();
             const openingStylesPayload = openingStyles.map(i => new SpecificationDTO(i));
 
-            if (opening === 'exterior') {
+            if (opening === 'exterior' && product === 'ventana') {
                 const validOpeningStyles = openingStylesPayload.filter(i => i.slug !== 'proyectante');
                 return validOpeningStyles;
             };
 
-            if (opening === 'interior') {
+            if (opening === 'interior' && product === 'ventana') {
                 const validOpeningStyles = openingStylesPayload.filter(i => i.slug === 'proyectante');
                 return validOpeningStyles;
             };
 
-            return { status: 'Completado' };
+        } catch (error) {
+            throw CustomError.createError({
+                name: error.name || 'Error en la base de datos.',
+                cause: error.cause || 'Error al obtener las opciones de apertura de la base de datos.',
+                message: error.message || 'Hubo un error en su solicitud y no se pudieron procesar los tipos de abertura.',
+                status: error.status || 500
+            });
+        };
+    };
+
+    async getTypes(product, opening, style) {
+        try {
+
         } catch (error) {
             throw CustomError.createError({
                 name: error.name || 'Error en la base de datos.',
