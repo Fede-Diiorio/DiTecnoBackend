@@ -1,0 +1,124 @@
+{
+    "opening": [
+        {
+            "name": "Apertura hacia adentro",
+            "slug": "interior",
+            "style": [
+                {
+                    "name": "Batiente",
+                    "slug": "batiente",
+                    "type": [
+                        {
+                            "name": "Un paño móvil y uno fijo abajo",
+                            "slug": "superpuesta",
+                            "color": [
+                                {
+                                    "name": "Liso",
+                                    "slug": "liso"
+                                },
+                                {
+                                    "name": "Roble",
+                                    "slug": "liso"
+                                },
+                                {
+                                    "name": "Nogal",
+                                    "slug": "nogal"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Un paño móvil",
+                            "slug": "simple",
+                            "color": [
+                                {
+                                    "name": "Liso",
+                                    "slug": "liso"
+                                },
+                                {
+                                    "name": "Roble",
+                                    "slug": "liso"
+                                },
+                                {
+                                    "name": "Nogal",
+                                    "slug": "nogal"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Un paño móvil y uno fijo al lado",
+                            "slug": "lateral",
+                            "color": [
+                                {
+                                    "name": "Liso",
+                                    "slug": "liso"
+                                },
+                                {
+                                    "name": "Roble",
+                                    "slug": "liso"
+                                },
+                                {
+                                    "name": "Nogal",
+                                    "slug": "nogal"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Oscilobatiente",
+                    "slug": "oscilobatiente",
+                    "type": [
+                        {
+                            "name": "Un paño móvil",
+                            "slug": "simple",
+                            "color": [
+                                {
+                                    "name": "Liso",
+                                    "slug": "liso"
+                                },
+                                {
+                                    "name": "Roble",
+                                    "slug": "liso"
+                                },
+                                {
+                                    "name": "Nogal",
+                                    "slug": "nogal"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Un paño móvil y uno fijo al lado",
+                            "slug": "lateral",
+                            "color": [
+                                {
+                                    "name": "Liso",
+                                    "slug": "liso"
+                                },
+                                {
+                                    "name": "Roble",
+                                    "slug": "liso"
+                                },
+                                {
+                                    "name": "Nogal",
+                                    "slug": "nogal"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Apertura hacia afuera",
+            "slug": "exterior"
+        },
+        {
+            "name": "Apertura Corrediza",
+            "slug": "corrediza"
+        },
+        {
+            "name": "Ventana fija",
+            "slug": "fija"
+        }
+    ]
+}

@@ -46,13 +46,8 @@ class ProductRepository {
             const openings = await this.#openingDao.getOpeningTypes();
             const openingsPayload = openings.map(i => new SpecificationDTO(i));
 
-            if (product === 'ventana') {
+            if (product === 'ventana' || product === 'puerta') {
                 return openingsPayload;
-            };
-
-            if (product === 'puerta') {
-                const validOpenings = openingsPayload.filter(i => i.slug !== 'corrediza');
-                return validOpenings;
             };
 
             throw CustomError.createError({
