@@ -3,6 +3,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
+// Routes
+const { WindowRouter } = require('./routes');
+
 // Environment
 const port = process.env.PORT || 3000;
 const mongoUrl = process.env.MONGO_URL;
@@ -15,7 +18,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-// Routes
+// Endpoints
+app.use('/api/ventana', WindowRouter);
 
 const main = async () => {
     await mongoose.connect(mongoUrl, { dbName })

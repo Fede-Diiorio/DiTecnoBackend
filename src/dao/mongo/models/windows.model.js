@@ -24,6 +24,6 @@ const WindowsSchema = new Schema({
     opening: [OpeningSchema]  // Un producto tiene una lista de aperturas.
 });
 
-const Window = mongoose.model('Window', WindowsSchema, "window");
+const Window = mongoose.model('Window', WindowsSchema, "windows");
 
 module.exports = Window;

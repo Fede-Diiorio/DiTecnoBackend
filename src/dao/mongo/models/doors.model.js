@@ -30,7 +30,6 @@ const DoorSchema = new Schema({
 });
 
 // Creación de los modelos
-const Design = mongoose.model('Design', DesignSchema);
-const Door = mongoose.model('Door', DoorSchema);
+const Door = mongoose.model('Door', DoorSchema, 'doors');
 
-module.exports = { Color, Design, Door };
+module.exports = { Door };
