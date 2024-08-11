@@ -105,12 +105,152 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "name": "Banderola",
+                    "slug": "banderola",
+                    "type": [
+                        {
+                            "name": "Un paño móvil",
+                            "slug": "simple",
+                            "color": [
+                                {
+                                    "name": "Liso",
+                                    "slug": "liso"
+                                },
+                                {
+                                    "name": "Roble",
+                                    "slug": "liso"
+                                },
+                                {
+                                    "name": "Nogal",
+                                    "slug": "nogal"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Un paño móvil y uno fijo al lado",
+                            "slug": "lateral",
+                            "color": [
+                                {
+                                    "name": "Liso",
+                                    "slug": "liso"
+                                },
+                                {
+                                    "name": "Roble",
+                                    "slug": "liso"
+                                },
+                                {
+                                    "name": "Nogal",
+                                    "slug": "nogal"
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         },
         {
             "name": "Apertura hacia afuera",
-            "slug": "exterior"
+            "slug": "exterior",
+            "Style": [
+                {
+                    "name": "Proyectante",
+                    "slug": "proyectante",
+                    "type": [
+                        {
+                            "name": "Un paño móvil y uno fijo abajo",
+                            "slug": "superpuesta",
+                            "color": [
+                                {
+                                    "name": "Liso",
+                                    "slug": "liso"
+                                },
+                                {
+                                    "name": "Roble",
+                                    "slug": "liso"
+                                },
+                                {
+                                    "name": "Nogal",
+                                    "slug": "nogal"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Un paño móvil",
+                            "slug": "simple",
+                            "color": [
+                                {
+                                    "name": "Liso",
+                                    "slug": "liso"
+                                },
+                                {
+                                    "name": "Roble",
+                                    "slug": "liso"
+                                },
+                                {
+                                    "name": "Nogal",
+                                    "slug": "nogal"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Un paño móvil y uno fijo al lado",
+                            "slug": "lateral",
+                            "color": [
+                                {
+                                    "name": "Liso",
+                                    "slug": "liso"
+                                },
+                                {
+                                    "name": "Roble",
+                                    "slug": "liso"
+                                },
+                                {
+                                    "name": "Nogal",
+                                    "slug": "nogal"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Un paño móvil, uno fijo debajo y otro fijo al lado",
+                            "slug": "lateralSuperpuesto",
+                            "color": [
+                                {
+                                    "name": "Liso",
+                                    "slug": "liso"
+                                },
+                                {
+                                    "name": "Roble",
+                                    "slug": "liso"
+                                },
+                                {
+                                    "name": "Nogal",
+                                    "slug": "nogal"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Dos paños móviles arriba y uno fijo abajo",
+                            "slug": "dobleSuperpuesto",
+                            "color": [
+                                {
+                                    "name": "Liso",
+                                    "slug": "liso"
+                                },
+                                {
+                                    "name": "Roble",
+                                    "slug": "liso"
+                                },
+                                {
+                                    "name": "Nogal",
+                                    "slug": "nogal"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "name": "Apertura Corrediza",
