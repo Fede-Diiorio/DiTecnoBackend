@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
-const ColorSchema = new Schema({
+const DesingSchema = new Schema({
     name: { type: String, required: true },
     slug: { type: String, required: true }
 });
 
-const Color = mongoose.model('Color', ColorSchema, "colors");
+const Design = mongoose.model('Design', DesingSchema, "designs");
 
-module.exports = Color;
+module.exports = Design;

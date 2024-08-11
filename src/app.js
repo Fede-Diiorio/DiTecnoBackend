@@ -2,7 +2,6 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const { router: products } = require('./routes/products.router');
 
 // Environment
 const port = process.env.PORT || 3000;
@@ -17,7 +16,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 // Routes
-app.use('/api', products);
 
 const main = async () => {
     await mongoose.connect(mongoUrl, { dbName })
