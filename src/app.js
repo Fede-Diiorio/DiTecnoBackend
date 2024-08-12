@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 // Routes
-const { WindowRouter } = require('./routes');
+const { WindowRouter, DoorRouter } = require('./routes');
 
 // Environment
 const port = process.env.PORT || 3000;
@@ -20,10 +20,11 @@ app.use(cors());
 
 // Endpoints
 app.use('/api/ventana', WindowRouter);
+app.use('/api/puerta', DoorRouter);
 
 const main = async () => {
     await mongoose.connect(mongoUrl, { dbName })
-        .then(() => console.log('Conectado a MongoDB'))
+        .then(() => console.log('Connected to MongoDB'))
         .catch(err => console.error('Error al conectar a MongoDB: ', err));
 
     app.listen(port, () => {

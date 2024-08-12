@@ -6,6 +6,4 @@ const ColorSchema = new Schema({
     slug: { type: String, required: true }
 });
 
-const Color = mongoose.model('Color', ColorSchema, "colors");
-
-module.exports = Color;
+module.exports = mongoose.model('Color', ColorSchema, "colors");

@@ -14,6 +14,4 @@ const DoorSchema = new Schema({
     types: [TypeSchema],
 });
 
-// Creación de los modelos
-
 module.exports = mongoose.model('Door', DoorSchema, 'doors');

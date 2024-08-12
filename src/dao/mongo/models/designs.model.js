@@ -6,6 +6,4 @@ const DesingSchema = new Schema({
     slug: { type: String, required: true }
 });
 
-const Design = mongoose.model('Design', DesingSchema, "designs");
-
-module.exports = Design;
+module.exports = mongoose.model('Design', DesingSchema, "designs");

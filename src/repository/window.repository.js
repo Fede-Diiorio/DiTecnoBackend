@@ -95,8 +95,8 @@ class WindowRepository {
                 message: error.message || 'La petición realizada no pudo ser completada debido a un error en la solicitud.',
                 status: error.status || 500
             });
-        }
-    }
+        };
+    };
 };
 
 module.exports = { WindowRepository };
