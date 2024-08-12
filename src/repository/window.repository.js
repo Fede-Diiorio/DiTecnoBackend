@@ -18,9 +18,9 @@ class WindowRepository {
 
         } catch (error) {
             throw CustomError.createError({
-                name: error.name || 'Error en la base de datos.',
-                cause: error.cause || 'Error al obtener las opciones de apertura de la base de datos.',
-                message: error.message || 'Hubo un error en su solicitud y no se pudieron procesar los tipos de abertura.',
+                name: error.name || 'Error en las aberturas.',
+                cause: error.cause || 'Ocurrió un error al procesar su solicitud y no se pudieron cargar los datos de forma correcta.',
+                message: error.message || 'La petición realizada no pudo ser completada debido a un error en la solicitud.',
                 status: error.status || 500
             });
         };
@@ -54,14 +54,29 @@ class WindowRepository {
 
         } catch (error) {
             throw CustomError.createError({
-                name: error.name || 'Error en la base de datos.',
-                cause: error.cause || 'Error al obtener las opciones de apertura de la base de datos.',
-                message: error.message || 'Hubo un error en su solicitud y no se pudieron procesar los tipos de abertura.',
+                name: error.name || 'Error en estilo de aberturas.',
+                cause: error.cause || 'Ocurrió un error al procesar su solicitud y no se pudieron cargar los datos de forma correcta.',
+                message: error.message || 'La petición realizada no pudo ser completada debido a un error en la solicitud.',
                 status: error.status || 500
             });
         };
     };
 
+    async getTypes(opening, style) {
+        try {
+            const type = await this.#windowDao.getTypes(opening, style);
+            console.log(type);
+            return 'Camino completado';
+
+        } catch (error) {
+            throw CustomError.createError({
+                name: error.name || 'Error en tipo de aberturas.',
+                cause: error.cause || 'Ocurrió un error al procesar su solicitud y no se pudieron cargar los datos de forma correcta.',
+                message: error.message || 'La petición realizada no pudo ser completada debido a un error en la solicitud.',
+                status: error.status || 500
+            });
+        }
+    }
 };
 
 module.exports = { WindowRepository };

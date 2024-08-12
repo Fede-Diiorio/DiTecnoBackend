@@ -26,6 +26,17 @@ class Controller {
             res.status(error.status || 500).json(error);
         };
     };
-};
+
+    async getTypes(req, res) {
+        try {
+            const opening = req.params.opening;
+            const style = req.params.style;
+            const types = await this.#windowRepository.getTypes(opening, style);
+            res.json(types);
+        } catch (error) {
+            res.status(error.status || 500).json(error);
+        };
+    }
+};;
 
 module.exports = { Controller };
