@@ -1,5 +1,5 @@
 const WindowDao = require('../dao/mongo/window.dao');
-const { OpeningsDTO, StylesDTO } = require('../dto');
+const { OpeningsDTO, StylesDTO, TypeDTO } = require('../dto');
 const { CustomError } = require('../utils/customErrors');
 
 class WindowRepository {
@@ -33,7 +33,7 @@ class WindowRepository {
             if (styles.length === 0) {
                 throw CustomError.createError({
                     name: 'Parámetro inválido.',
-                    cause: 'Hubo un error al intentar procesar su solicitud porque el tipo de avertuna no existe.',
+                    cause: 'Hubo un error al intentar procesar su solicitud porque el estilo de avertuna no existe.',
                     message: 'No existen estilos en la abertura solicitada',
                     status: 404
                 });
@@ -44,7 +44,7 @@ class WindowRepository {
             if (!stylesPayload || stylesPayload.length === 0) {
                 throw CustomError.createError({
                     name: 'Error en la petición.',
-                    cause: 'Ocurrió un error al obtener los estilos, es posible que el tipo de apertura que buscas no exista.',
+                    cause: 'Ocurrió un error al obtener los estilos, es posible que el estilo de apertura que buscas no exista.',
                     message: 'No se pudo obtener ningún estilo de la base de datos.',
                     status: 404
                 });
@@ -64,9 +64,29 @@ class WindowRepository {
 
     async getTypes(opening, style) {
         try {
-            const type = await this.#windowDao.getTypes(opening, style);
-            console.log(type);
-            return 'Camino completado';
+            const types = await this.#windowDao.getTypes(opening, style);
+
+            if (types.length === 0) {
+                throw CustomError.createError({
+                    name: 'Parámetro inválido.',
+                    cause: 'Hubo un error al intentar procesar su solicitud porque el tipo de avertuna no existe.',
+                    message: 'No existen tipos en el estilo de abertura solicitada',
+                    status: 404
+                });
+            };
+
+            const typesPayload = types.map(type => new TypeDTO(type));
+
+            if (!typesPayload || typesPayload.length === 0) {
+                throw CustomError.createError({
+                    name: 'Error en la petición.',
+                    cause: 'Ocurrió un error al obtener los estilos, es posible que el tipo de apertura que buscas no exista.',
+                    message: 'No se pudo obtener ningún tipo de abertura de la base de datos.',
+                    status: 404
+                });
+            };
+
+            return typesPayload;
 
         } catch (error) {
             throw CustomError.createError({
