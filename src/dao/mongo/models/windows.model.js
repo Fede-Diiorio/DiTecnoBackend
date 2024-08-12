@@ -1,29 +1,27 @@
 const mongoose = require('mongoose');
-const { Schema } = mongoose;
+const Schema = mongoose.Schema;
 
+// Esquema para los tipos
 const TypeSchema = new Schema({
     name: { type: String, required: true },
     slug: { type: String, required: true },
-    color: [{ type: Schema.Types.ObjectId, ref: 'Color' }]  // Referencia a la colección Color.
+    color: [{ type: Schema.Types.ObjectId, ref: 'Color' }]  // Referencia a la colección de colores
 });
 
+// Esquema para los estilos
 const StyleSchema = new Schema({
     name: { type: String, required: true },
     slug: { type: String, required: true },
-    type: [TypeSchema]  // Un estilo tiene una lista de tipos.
+    type: [TypeSchema]
 });
 
-const OpeningSchema = new Schema({
+// Esquema para las aperturas
+const WindowSchema = new Schema({
     name: { type: String, required: true },
     slug: { type: String, required: true },
-    style: [StyleSchema],  // Una apertura tiene una lista de estilos.
-    color: [{ type: Schema.Types.ObjectId, ref: 'Color' }]  // Referencia a la colección Color.
+    style: [StyleSchema]
 });
 
-const WindowsSchema = new Schema({
-    opening: [OpeningSchema]  // Un producto tiene una lista de aperturas.
-});
+module.exports = mongoose.model('Window', WindowSchema, 'windows');
 
-const Window = mongoose.model('Window', WindowsSchema, "windows");
 
-module.exports = Window;

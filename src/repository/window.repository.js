@@ -1,4 +1,5 @@
 const WindowDao = require('../dao/mongo/window.dao');
+const { SpecificationDTO } = require('../dto/specifications.dto');
 
 class WindowRepository {
     #windowDao;
@@ -10,9 +11,10 @@ class WindowRepository {
     async getOpenings() {
         try {
             const openings = await this.#windowDao.getOpenings();
-            return openings;
+            const openingsPayload = openings.map(opening => new SpecificationDTO(opening));
+            return openingsPayload;
         } catch (error) {
-            throw new Error('Error')
+            console.log(error)
         };
     };
 };
