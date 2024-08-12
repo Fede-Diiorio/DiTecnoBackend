@@ -9,8 +9,22 @@ class Controller {
     };
 
     async getOpening(res) {
-        const openings = await this.#windowRepository.getOpenings();
-        res.json(openings);
+        try {
+            const openings = await this.#windowRepository.getOpenings();
+            res.json(openings);
+        } catch (error) {
+            res.status(error.status || 500).json(error);
+        };
+    };
+
+    async getStyles(req, res) {
+        try {
+            const opening = req.params.opening;
+            const styles = await this.#windowRepository.getStyles(opening);
+            res.json(styles);
+        } catch (error) {
+            res.status(error.status || 500).json(error);
+        };
     };
 };
 
