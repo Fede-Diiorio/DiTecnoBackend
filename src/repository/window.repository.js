@@ -29,7 +29,6 @@ class WindowRepository {
     async getStyles(opening) {
         try {
             const styles = await this.#windowDao.getStyles(opening);
-
             if (styles.length === 0) {
                 throw CustomError.createError({
                     name: 'Parámetro inválido.',

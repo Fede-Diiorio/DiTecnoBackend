@@ -11,7 +11,7 @@ const TypeSchema = new Schema({
 const DoorSchema = new Schema({
     name: { type: String, required: true },
     slug: { type: String, required: true },
-    types: [TypeSchema],
+    type: [TypeSchema],
 });
 
 module.exports = mongoose.model('Door', DoorSchema, 'doors');

@@ -5,7 +5,7 @@ class StylesDTO {
             slug: s.slug,
             id: s._id.toString()
         }));
-    }
-}
+    };
+};
 
 module.exports = StylesDTO;

@@ -1,4 +1,4 @@
-const { Windows, Colors } = require('./models');
+const { Windows } = require('./models');
 
 class WindowDao {
     async getOpenings() {

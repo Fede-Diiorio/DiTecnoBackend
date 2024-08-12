@@ -1,13 +1,13 @@
-const { Doors, Colors } = require('./models');
+const { Doors } = require('./models');
 
-class WindowDao {
+class DoorDao {
     async getOpenings() {
         return await Doors.find();
     };
 
     async getTypes(opening) {
-        return await Doors.find({ slug: opening }, 'style');
+        return await Doors.find({ slug: opening }, 'type');
     };
 };
 
-module.exports = WindowDao;
+module.exports = DoorDao;
