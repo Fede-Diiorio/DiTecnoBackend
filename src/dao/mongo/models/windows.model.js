@@ -5,7 +5,6 @@ const Schema = mongoose.Schema;
 const TypeSchema = new Schema({
     name: { type: String, required: true },
     slug: { type: String, required: true },
-    color: [{ type: Schema.Types.ObjectId, ref: 'Color' }]  // Referencia a la colección de colores
 });
 
 // Esquema para los estilos

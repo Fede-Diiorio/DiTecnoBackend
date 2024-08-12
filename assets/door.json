@@ -1,140 +1,40 @@
-{
-    "opening": [
-        {
-            "name": "Apertura hacia adentro",
-            "slug": "interior",
-            "type": [
-                {
-                    "name": "Puerta simple",
-                    "slug": "simple",
-                    "color": [
-                        {
-                            "name": "Liso",
-                            "slug": "liso"
-                        },
-                        {
-                            "name": "Roble",
-                            "slug": "liso"
-                        },
-                        {
-                            "name": "Nogal",
-                            "slug": "nogal"
-                        }
-                    ],
-                    "design": [
-                        {
-                            "name": "Cuadrado",
-                            "slug": "cuadrado"
-                        }
-                    ]
-                },
-                {
-                    "name": "Puerta doble",
-                    "slug": "doble",
-                    "color": [
-                        {
-                            "name": "Liso",
-                            "slug": "liso"
-                        },
-                        {
-                            "name": "Roble",
-                            "slug": "liso"
-                        },
-                        {
-                            "name": "Nogal",
-                            "slug": "nogal"
-                        }
-                    ],
-                    "design": [
-                        {
-                            "name": "Cuadrado",
-                            "slug": "cuadrado"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Apertura hacia afuera",
-            "slug": "exterior",
-            "type": [
-                {
-                    "name": "Puerta simple",
-                    "slug": "simple",
-                    "color": [
-                        {
-                            "name": "Liso",
-                            "slug": "liso"
-                        },
-                        {
-                            "name": "Roble",
-                            "slug": "liso"
-                        },
-                        {
-                            "name": "Nogal",
-                            "slug": "nogal"
-                        }
-                    ],
-                    "design": [
-                        {
-                            "name": "Cuadrado",
-                            "slug": "cuadrado"
-                        }
-                    ]
-                },
-                {
-                    "name": "Puerta doble",
-                    "slug": "doble",
-                    "color": [
-                        {
-                            "name": "Liso",
-                            "slug": "liso"
-                        },
-                        {
-                            "name": "Roble",
-                            "slug": "liso"
-                        },
-                        {
-                            "name": "Nogal",
-                            "slug": "nogal"
-                        }
-                    ],
-                    "design": [
-                        {
-                            "name": "Cuadrado",
-                            "slug": "cuadrado"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Apertura Corrediza",
-            "slug": "corrediza",
-            "color": [
-                {
-                    "name": "Liso",
-                    "slug": "liso"
-                },
-                {
-                    "name": "Roble",
-                    "slug": "liso"
-                },
-                {
-                    "name": "Nogal",
-                    "slug": "nogal"
-                }
-            ],
-            "design": [
-                {
-                    "name": "Cuadrado",
-                    "slug": "cuadrado"
-                },
-                {
-                    "name": "Puertas vidriadas",
-                    "slug": "vidriadas"
-                }
-            ]
-        }
-    ]
-}
+[
+    {
+        "name": "Apertura hacia adentro",
+        "slug": "interior",
+        "type": [
+            {
+                "name": "Puerta simple",
+                "slug": "simple"
+            },
+            {
+                "name": "Puerta doble",
+                "slug": "doble"
+            }
+        ]
+    },
+    {
+        "name": "Apertura hacia afuera",
+        "slug": "exterior",
+        "type": [
+            {
+                "name": "Puerta simple",
+                "slug": "simple"
+            },
+            {
+                "name": "Puerta doble",
+                "slug": "doble"
+            }
+        ]
+    },
+    {
+        "name": "Apertura Corrediza",
+        "slug": "corrediza",
+        "type": [
+            {
+                "name": "Puerta doble",
+                "slug": "doble"
+            }
+        ]
+    }
+]

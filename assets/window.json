@@ -8,58 +8,16 @@
                 "slug": "batiente",
                 "type": [
                     {
-                        "name": "Un paño móvil y uno fijo abajo",
-                        "slug": "superpuesta",
-                        "color": [
-                            {
-                                "name": "Liso",
-                                "slug": "liso"
-                            },
-                            {
-                                "name": "Roble",
-                                "slug": "liso"
-                            },
-                            {
-                                "name": "Nogal",
-                                "slug": "nogal"
-                            }
-                        ]
+                        "name": "Una hoja móvil y una fijo abajo",
+                        "slug": "superpuesta"
                     },
                     {
-                        "name": "Un paño móvil",
-                        "slug": "simple",
-                        "color": [
-                            {
-                                "name": "Liso",
-                                "slug": "liso"
-                            },
-                            {
-                                "name": "Roble",
-                                "slug": "liso"
-                            },
-                            {
-                                "name": "Nogal",
-                                "slug": "nogal"
-                            }
-                        ]
+                        "name": "Una hoja móvil",
+                        "slug": "simple"
                     },
                     {
-                        "name": "Un paño móvil y uno fijo al lado",
-                        "slug": "lateral",
-                        "color": [
-                            {
-                                "name": "Liso",
-                                "slug": "liso"
-                            },
-                            {
-                                "name": "Roble",
-                                "slug": "liso"
-                            },
-                            {
-                                "name": "Nogal",
-                                "slug": "nogal"
-                            }
-                        ]
+                        "name": "Una hoja móvil y una fijo al lado",
+                        "slug": "lateral"
                     }
                 ]
             },
@@ -68,40 +26,12 @@
                 "slug": "oscilobatiente",
                 "type": [
                     {
-                        "name": "Un paño móvil",
-                        "slug": "simple",
-                        "color": [
-                            {
-                                "name": "Liso",
-                                "slug": "liso"
-                            },
-                            {
-                                "name": "Roble",
-                                "slug": "liso"
-                            },
-                            {
-                                "name": "Nogal",
-                                "slug": "nogal"
-                            }
-                        ]
+                        "name": "Una hoja móvil",
+                        "slug": "simple"
                     },
                     {
-                        "name": "Un paño móvil y uno fijo al lado",
-                        "slug": "lateral",
-                        "color": [
-                            {
-                                "name": "Liso",
-                                "slug": "liso"
-                            },
-                            {
-                                "name": "Roble",
-                                "slug": "liso"
-                            },
-                            {
-                                "name": "Nogal",
-                                "slug": "nogal"
-                            }
-                        ]
+                        "name": "Una hoja móvil y una fijo al lado",
+                        "slug": "lateral"
                     }
                 ]
             },
@@ -110,40 +40,12 @@
                 "slug": "banderola",
                 "type": [
                     {
-                        "name": "Un paño móvil",
-                        "slug": "simple",
-                        "color": [
-                            {
-                                "name": "Liso",
-                                "slug": "liso"
-                            },
-                            {
-                                "name": "Roble",
-                                "slug": "liso"
-                            },
-                            {
-                                "name": "Nogal",
-                                "slug": "nogal"
-                            }
-                        ]
+                        "name": "Una hoja móvil",
+                        "slug": "simple"
                     },
                     {
-                        "name": "Un paño móvil y uno fijo al lado",
-                        "slug": "lateral",
-                        "color": [
-                            {
-                                "name": "Liso",
-                                "slug": "liso"
-                            },
-                            {
-                                "name": "Roble",
-                                "slug": "liso"
-                            },
-                            {
-                                "name": "Nogal",
-                                "slug": "nogal"
-                            }
-                        ]
+                        "name": "Una hoja móvil y una fijo al lado",
+                        "slug": "lateral"
                     }
                 ]
             }
@@ -158,94 +60,24 @@
                 "slug": "proyectante",
                 "type": [
                     {
-                        "name": "Un paño móvil y uno fijo abajo",
-                        "slug": "superpuesta",
-                        "color": [
-                            {
-                                "name": "Liso",
-                                "slug": "liso"
-                            },
-                            {
-                                "name": "Roble",
-                                "slug": "liso"
-                            },
-                            {
-                                "name": "Nogal",
-                                "slug": "nogal"
-                            }
-                        ]
+                        "name": "Una hoja móvil y una fijo abajo",
+                        "slug": "superpuesta"
                     },
                     {
-                        "name": "Un paño móvil",
-                        "slug": "simple",
-                        "color": [
-                            {
-                                "name": "Liso",
-                                "slug": "liso"
-                            },
-                            {
-                                "name": "Roble",
-                                "slug": "liso"
-                            },
-                            {
-                                "name": "Nogal",
-                                "slug": "nogal"
-                            }
-                        ]
+                        "name": "Una hoja móvil",
+                        "slug": "simple"
                     },
                     {
-                        "name": "Un paño móvil y uno fijo al lado",
-                        "slug": "lateral",
-                        "color": [
-                            {
-                                "name": "Liso",
-                                "slug": "liso"
-                            },
-                            {
-                                "name": "Roble",
-                                "slug": "liso"
-                            },
-                            {
-                                "name": "Nogal",
-                                "slug": "nogal"
-                            }
-                        ]
+                        "name": "Una hoja móvil y una fijo al lado",
+                        "slug": "lateral"
                     },
                     {
-                        "name": "Un paño móvil, uno fijo debajo y otro fijo al lado",
-                        "slug": "lateralSuperpuesto",
-                        "color": [
-                            {
-                                "name": "Liso",
-                                "slug": "liso"
-                            },
-                            {
-                                "name": "Roble",
-                                "slug": "liso"
-                            },
-                            {
-                                "name": "Nogal",
-                                "slug": "nogal"
-                            }
-                        ]
+                        "name": "Una hoja móvil, una fijo debajo y otro fijo al lado",
+                        "slug": "lateralSuperpuesto"
                     },
                     {
-                        "name": "Dos paños móviles arriba y uno fijo abajo",
-                        "slug": "dobleSuperpuesto",
-                        "color": [
-                            {
-                                "name": "Liso",
-                                "slug": "liso"
-                            },
-                            {
-                                "name": "Roble",
-                                "slug": "liso"
-                            },
-                            {
-                                "name": "Nogal",
-                                "slug": "nogal"
-                            }
-                        ]
+                        "name": "Dos paños móviles arriba y una fijo abajo",
+                        "slug": "dobleSuperpuesto"
                     }
                 ]
             }
@@ -261,21 +93,7 @@
                 "type": [
                     {
                         "name": "Dos paños móviles",
-                        "slug": "doble",
-                        "color": [
-                            {
-                                "name": "Liso",
-                                "slug": "liso"
-                            },
-                            {
-                                "name": "Roble",
-                                "slug": "liso"
-                            },
-                            {
-                                "name": "Nogal",
-                                "slug": "nogal"
-                            }
-                        ]
+                        "slug": "doble"
                     }
                 ]
             }
@@ -290,22 +108,8 @@
                 "slug": "fija",
                 "type": [
                     {
-                        "name": "Un paño fijo",
-                        "slug": "simple",
-                        "color": [
-                            {
-                                "name": "Liso",
-                                "slug": "liso"
-                            },
-                            {
-                                "name": "Roble",
-                                "slug": "liso"
-                            },
-                            {
-                                "name": "Nogal",
-                                "slug": "nogal"
-                            }
-                        ]
+                        "name": "Una hoja fijo",
+                        "slug": "simple"
                     }
                 ]
             }
