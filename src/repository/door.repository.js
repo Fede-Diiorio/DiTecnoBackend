@@ -1,12 +1,15 @@
 const DoorDao = require('../dao/mongo/door.dao');
-const { OpeningsDTO, DoorTypeDTO } = require('../dto');
+const ColorDao = require('../dao/mongo/color.dao');
+const { OpeningsDTO, DoorTypeDTO, ColorDTO } = require('../dto');
 const { CustomError } = require('../utils/customErrors');
 
 class DoorRepository {
     #doorDao;
+    #colorDao;
 
     constructor() {
         this.#doorDao = new DoorDao();
+        this.#colorDao = new ColorDao();
     };
 
     async getOpenings() {
@@ -60,6 +63,32 @@ class DoorRepository {
                 status: error.status || 500
             });
         };
+    };
+
+    async getColors(opening, type) {
+        try {
+            if (!opening || !type) {
+                throw CustomError.createError({
+                    name: 'Error en la petición.',
+                    cause: 'No proporcionó datos suficientes relacionados a la apertura, con lo que la operación no se puede concluir.',
+                    message: 'Debe incluir una abertura válida en la URL.',
+                    status: 404
+                });
+            };
+
+            const colors = await this.#colorDao.getColors();
+            const colorsPayload = colors.map(c => new ColorDTO(c));
+            return colorsPayload;
+
+        } catch (error) {
+            throw CustomError.createError({
+                name: error.name || 'Error en tipo de aberturas.',
+                cause: error.cause || 'Ocurrió un error al procesar su solicitud y no se pudieron cargar los datos de forma correcta.',
+                message: error.message || 'La petición realizada no pudo ser completada debido a un error en la solicitud.',
+                status: error.status || 500
+            });
+        };
+
     };
 };
 

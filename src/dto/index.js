@@ -3,4 +3,5 @@ module.exports = {
     StylesDTO: require('./styles.dto'),
     TypeDTO: require('./type.dto'),
     DoorTypeDTO: require('./doorType.dto'),
+    ColorDTO: require('./color.dto'),
 }
