@@ -1,6 +1,7 @@
 const DoorDao = require('../dao/mongo/door.dao');
 const ColorDao = require('../dao/mongo/color.dao');
-const { OpeningsDTO, DoorTypeDTO, ColorDTO } = require('../dto');
+const DesignsDao = require('../dao/mongo/design.dao');
+const { OpeningsDTO, DoorTypeDTO, ColorOrDesignDTO } = require('../dto');
 const { CustomError } = require('../utils/customErrors');
 
 class DoorRepository {
@@ -22,7 +23,7 @@ class DoorRepository {
         } catch (error) {
             throw CustomError.createError({
                 name: error.name || 'Error en las aberturas.',
-                cause: error.cause || 'Ocurrió un error al procesar su solicitud y no se pudieron cargar los datos de forma correcta.',
+                cause: error.cause || 'Ocurrió un error al procesar su solicitud y no se pudo cargar los datos de forma correcta.',
                 message: error.message || 'La petición realizada no pudo ser completada debido a un error en la solicitud.',
                 status: error.status || 500
             });
@@ -58,7 +59,7 @@ class DoorRepository {
         } catch (error) {
             throw CustomError.createError({
                 name: error.name || 'Error en tipo de aberturas.',
-                cause: error.cause || 'Ocurrió un error al procesar su solicitud y no se pudieron cargar los datos de forma correcta.',
+                cause: error.cause || 'Ocurrió un error al procesar su solicitud y no se pudo cargar los datos de forma correcta.',
                 message: error.message || 'La petición realizada no pudo ser completada debido a un error en la solicitud.',
                 status: error.status || 500
             });
@@ -77,13 +78,58 @@ class DoorRepository {
             };
 
             const colors = await this.#colorDao.getColors();
+
+            if (colors.length === 0) {
+                throw CustomError.createError({
+                    name: 'Parámetro inválido.',
+                    cause: 'Hubo un error al intentar procesar su solicitud porque no se pudo acceder a los colores.',
+                    message: 'No existen colores para asignar a esta abertura.',
+                    status: 404
+                });
+            };
+
+            const colorsPayload = colors.map(color => new ColorOrDesignDTO(color));
+
+            if (!colorsPayload || colorsPayload.length === 0) {
+                throw CustomError.createError({
+                    name: 'Error en la petición.',
+                    cause: 'Ocurrió un error al obtener los colores, es posible que el color de apertura que buscas no exista.',
+                    message: 'No se pudo obtener ningún color de abertura de la base de datos.',
+                    status: 404
+                });
+            };
+
+            return colorsPayload;
+
+        } catch (error) {
+            throw CustomError.createError({
+                name: error.name || 'Error en tipo de aberturas.',
+                cause: error.cause || 'Ocurrió un error al procesar su solicitud y no se pudo cargar los datos de forma correcta.',
+                message: error.message || 'La petición realizada no pudo ser completada debido a un error en la solicitud.',
+                status: error.status || 500
+            });
+        };
+    };
+
+    async getDesigns(opening, type, color) {
+        try {
+            if (!opening || !type || !color) {
+                throw CustomError.createError({
+                    name: 'Error en la petición.',
+                    cause: 'No proporcionó datos suficientes relacionados a la apertura, con lo que la operación no se puede concluir.',
+                    message: 'Debe incluir una abertura válida en la URL.',
+                    status: 404
+                });
+            };
+
+            const colors = await this.#colorDao.getColors();
             const colorsPayload = colors.map(c => new ColorDTO(c));
             return colorsPayload;
 
         } catch (error) {
             throw CustomError.createError({
                 name: error.name || 'Error en tipo de aberturas.',
-                cause: error.cause || 'Ocurrió un error al procesar su solicitud y no se pudieron cargar los datos de forma correcta.',
+                cause: error.cause || 'Ocurrió un error al procesar su solicitud y no se pudo cargar los datos de forma correcta.',
                 message: error.message || 'La petición realizada no pudo ser completada debido a un error en la solicitud.',
                 status: error.status || 500
             });

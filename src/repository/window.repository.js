@@ -1,6 +1,6 @@
 const WindowDao = require('../dao/mongo/window.dao');
 const ColorDao = require('../dao/mongo/color.dao');
-const { OpeningsDTO, StylesDTO, TypeDTO, ColorDTO } = require('../dto');
+const { OpeningsDTO, StylesDTO, TypeDTO, ColorOrDesignDTO } = require('../dto');
 const { CustomError } = require('../utils/customErrors');
 
 class WindowRepository {
@@ -112,7 +112,7 @@ class WindowRepository {
             };
 
             const colors = await this.#colorDao.getColors();
-            const colorsPayload = colors.map(c => new ColorDTO(c));
+            const colorsPayload = colors.map(color => new ColorOrDesignDTO(color));
             return colorsPayload;
 
         } catch (error) {

@@ -1,4 +1,4 @@
-class ColorDTO {
+class ColorOrDesignDTO {
     constructor(data) {
         this.name = data.name;
         this.slug = data.slug;
@@ -7,4 +7,4 @@ class ColorDTO {
     };
 };
 
-module.exports = ColorDTO;
+module.exports = ColorOrDesignDTO;
