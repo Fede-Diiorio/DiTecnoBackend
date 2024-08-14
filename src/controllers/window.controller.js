@@ -36,7 +36,19 @@ class Controller {
         } catch (error) {
             res.status(error.status || 500).json(error);
         };
+    };
+
+    async getColors(req, res) {
+        try {
+            const opening = req.params.opening;
+            const style = req.params.style;
+            const type = req.params.type
+            const colors = await this.#windowRepository.getColors(opening, style, type);
+            res.json(colors);
+        } catch (error) {
+            res.status(error.status || 500).json(error);
+        };
     }
-};;
+};
 
 module.exports = { Controller };

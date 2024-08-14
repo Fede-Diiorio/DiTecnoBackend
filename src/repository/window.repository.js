@@ -1,12 +1,15 @@
 const WindowDao = require('../dao/mongo/window.dao');
-const { OpeningsDTO, StylesDTO, TypeDTO } = require('../dto');
+const ColorDao = require('../dao/mongo/color.dao');
+const { OpeningsDTO, StylesDTO, TypeDTO, ColorDTO } = require('../dto');
 const { CustomError } = require('../utils/customErrors');
 
 class WindowRepository {
     #windowDao;
+    #colorDao;
 
     constructor() {
         this.#windowDao = new WindowDao();
+        this.#colorDao = new ColorDao();
     };
 
     async getOpenings() {
@@ -86,6 +89,31 @@ class WindowRepository {
             };
 
             return typesPayload;
+
+        } catch (error) {
+            throw CustomError.createError({
+                name: error.name || 'Error en tipo de aberturas.',
+                cause: error.cause || 'Ocurrió un error al procesar su solicitud y no se pudieron cargar los datos de forma correcta.',
+                message: error.message || 'La petición realizada no pudo ser completada debido a un error en la solicitud.',
+                status: error.status || 500
+            });
+        };
+    };
+
+    async getColors(opening, style, type) {
+        try {
+            if (!opening || !style || !type) {
+                throw CustomError.createError({
+                    name: 'Error en la petición.',
+                    cause: 'No proporcionó datos suficientes relacionados a la apertura, con lo que la operación no se puede concluir.',
+                    message: 'Debe incluir una abertura válida en la URL.',
+                    status: 404
+                });
+            };
+
+            const colors = await this.#colorDao.getColors();
+            const colorsPayload = colors.map(c => new ColorDTO(c));
+            return colorsPayload;
 
         } catch (error) {
             throw CustomError.createError({

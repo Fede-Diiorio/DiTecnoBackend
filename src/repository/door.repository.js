@@ -88,7 +88,6 @@ class DoorRepository {
                 status: error.status || 500
             });
         };
-
     };
 };
 
