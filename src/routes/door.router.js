@@ -8,4 +8,6 @@ router.get('/:opening', (req, res) => new Controller().getTypes(req, res));
 
 router.get('/:opening/:type', (req, res) => new Controller().getColors(req, res));
 
+router.get('/:opening/:type/:color', (req, res) => new Controller().getDesigns(req, res));
+
 module.exports = router;

@@ -37,6 +37,18 @@ class Controller {
             res.status(error.status || 500).json(error);
         };
     };
+
+    async getDesigns(req, res) {
+        try {
+            const opening = req.params.opening;
+            const type = req.params.type;
+            const color = req.params.color;
+            const design = await this.#doorRepository.getDesigns(opening, type, color);
+            res.json(design);
+        } catch (error) {
+            res.status(error.status || 500).json(error);
+        };
+    };
 };
 
 module.exports = { Controller };

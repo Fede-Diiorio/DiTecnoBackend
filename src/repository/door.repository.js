@@ -1,16 +1,18 @@
 const DoorDao = require('../dao/mongo/door.dao');
 const ColorDao = require('../dao/mongo/color.dao');
-const DesignsDao = require('../dao/mongo/design.dao');
+const DesignDao = require('../dao/mongo/design.dao');
 const { OpeningsDTO, DoorTypeDTO, ColorOrDesignDTO } = require('../dto');
 const { CustomError } = require('../utils/customErrors');
 
 class DoorRepository {
     #doorDao;
     #colorDao;
+    #desingDao;
 
     constructor() {
         this.#doorDao = new DoorDao();
         this.#colorDao = new ColorDao();
+        this.#desingDao = new DesignDao();
     };
 
     async getOpenings() {
@@ -122,9 +124,29 @@ class DoorRepository {
                 });
             };
 
-            const colors = await this.#colorDao.getColors();
-            const colorsPayload = colors.map(c => new ColorDTO(c));
-            return colorsPayload;
+            const designs = await this.#desingDao.getDesigns();
+
+            if (designs.length === 0) {
+                throw CustomError.createError({
+                    name: 'Parámetro inválido.',
+                    cause: 'Hubo un error al intentar procesar su solicitud porque no se pudo acceder a los diseños de aberturas.',
+                    message: 'No existen deseños para asignar a esta abertura.',
+                    status: 404
+                });
+            };
+
+            const designsPayload = designs.map(design => new ColorOrDesignDTO(design));
+
+            if (!designsPayload || designsPayload.length === 0) {
+                throw CustomError.createError({
+                    name: 'Error en la petición.',
+                    cause: 'Ocurrió un error al obtener los diseños, es posible que el diseño de apertura que buscas no exista.',
+                    message: 'No se pudo obtener ningún diseño de abertura de la base de datos.',
+                    status: 404
+                });
+            };
+
+            return designsPayload;
 
         } catch (error) {
             throw CustomError.createError({
