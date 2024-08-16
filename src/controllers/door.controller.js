@@ -27,24 +27,24 @@ class Controller {
         };
     };
 
-    async getColors(req, res) {
+    async getDesigns(req, res) {
         try {
             const opening = req.params.opening;
             const type = req.params.type;
-            const colors = await this.#doorRepository.getColors(opening, type);
-            res.json(colors);
+            const design = await this.#doorRepository.getDesigns(opening, type);
+            res.json(design);
         } catch (error) {
             res.status(error.status || 500).json(error);
         };
     };
 
-    async getDesigns(req, res) {
+    async getColors(req, res) {
         try {
             const opening = req.params.opening;
             const type = req.params.type;
-            const color = req.params.color;
-            const design = await this.#doorRepository.getDesigns(opening, type, color);
-            res.json(design);
+            const design = req.params.design;
+            const colors = await this.#doorRepository.getColors(opening, type, design);
+            res.json(colors);
         } catch (error) {
             res.status(error.status || 500).json(error);
         };

@@ -68,54 +68,9 @@ class DoorRepository {
         };
     };
 
-    async getColors(opening, type) {
+    async getDesigns(opening, type) {
         try {
             if (!opening || !type) {
-                throw CustomError.createError({
-                    name: 'Error en la petición.',
-                    cause: 'No proporcionó datos suficientes relacionados a la apertura, con lo que la operación no se puede concluir.',
-                    message: 'Debe incluir una abertura válida en la URL.',
-                    status: 404
-                });
-            };
-
-            const colors = await this.#colorDao.getColors();
-
-            if (colors.length === 0) {
-                throw CustomError.createError({
-                    name: 'Parámetro inválido.',
-                    cause: 'Hubo un error al intentar procesar su solicitud porque no se pudo acceder a los colores.',
-                    message: 'No existen colores para asignar a esta abertura.',
-                    status: 404
-                });
-            };
-
-            const colorsPayload = colors.map(color => new ColorOrDesignDTO(color));
-
-            if (!colorsPayload || colorsPayload.length === 0) {
-                throw CustomError.createError({
-                    name: 'Error en la petición.',
-                    cause: 'Ocurrió un error al obtener los colores, es posible que el color de apertura que buscas no exista.',
-                    message: 'No se pudo obtener ningún color de abertura de la base de datos.',
-                    status: 404
-                });
-            };
-
-            return colorsPayload;
-
-        } catch (error) {
-            throw CustomError.createError({
-                name: error.name || 'Error en tipo de aberturas.',
-                cause: error.cause || 'Ocurrió un error al procesar su solicitud y no se pudo cargar los datos de forma correcta.',
-                message: error.message || 'La petición realizada no pudo ser completada debido a un error en la solicitud.',
-                status: error.status || 500
-            });
-        };
-    };
-
-    async getDesigns(opening, type, color) {
-        try {
-            if (!opening || !type || !color) {
                 throw CustomError.createError({
                     name: 'Error en la petición.',
                     cause: 'No proporcionó datos suficientes relacionados a la apertura, con lo que la operación no se puede concluir.',
@@ -147,6 +102,51 @@ class DoorRepository {
             };
 
             return designsPayload;
+
+        } catch (error) {
+            throw CustomError.createError({
+                name: error.name || 'Error en tipo de aberturas.',
+                cause: error.cause || 'Ocurrió un error al procesar su solicitud y no se pudo cargar los datos de forma correcta.',
+                message: error.message || 'La petición realizada no pudo ser completada debido a un error en la solicitud.',
+                status: error.status || 500
+            });
+        };
+    };
+
+    async getColors(opening, type, design) {
+        try {
+            if (!opening || !type || !design) {
+                throw CustomError.createError({
+                    name: 'Error en la petición.',
+                    cause: 'No proporcionó datos suficientes relacionados a la apertura, con lo que la operación no se puede concluir.',
+                    message: 'Debe incluir una abertura válida en la URL.',
+                    status: 404
+                });
+            };
+
+            const colors = await this.#colorDao.getColors();
+
+            if (colors.length === 0) {
+                throw CustomError.createError({
+                    name: 'Parámetro inválido.',
+                    cause: 'Hubo un error al intentar procesar su solicitud porque no se pudo acceder a los colores.',
+                    message: 'No existen colores para asignar a esta abertura.',
+                    status: 404
+                });
+            };
+
+            const colorsPayload = colors.map(color => new ColorOrDesignDTO(color));
+
+            if (!colorsPayload || colorsPayload.length === 0) {
+                throw CustomError.createError({
+                    name: 'Error en la petición.',
+                    cause: 'Ocurrió un error al obtener los colores, es posible que el color de apertura que buscas no exista.',
+                    message: 'No se pudo obtener ningún color de abertura de la base de datos.',
+                    status: 404
+                });
+            };
+
+            return colorsPayload;
 
         } catch (error) {
             throw CustomError.createError({
