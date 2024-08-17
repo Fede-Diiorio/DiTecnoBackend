@@ -157,6 +157,10 @@ class DoorRepository {
             });
         };
     };
+
+    generateDoor(opening, type, design, color, data) {
+        console.log(opening, type, design, color, data);
+    }
 };
 
 module.exports = { DoorRepository };
