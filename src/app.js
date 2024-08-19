@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 // Routes
-const { WindowRouter, DoorRouter } = require('./routes');
+const { WindowRouter, DoorRouter, OrderRouter } = require('./routes');
 
 // Environment
 const port = process.env.PORT || 3000;
@@ -21,6 +21,7 @@ app.use(cors());
 // Endpoints
 app.use('/api/ventana', WindowRouter);
 app.use('/api/puerta', DoorRouter);
+app.use('/api/orden', OrderRouter);
 
 const main = async () => {
     await mongoose.connect(mongoUrl, { dbName })
