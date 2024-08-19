@@ -1,8 +1,9 @@
 const { CustomError } = require('../utils/customErrors');
-
+const { MailingService } = require('../utils/mailingService');
 class OrderRepository {
 
-    generateOrder(name, email, phone, cart) {
+    async generateOrder(name, email, phone, cart) {
+
         const userData = {
             nombre: name,
             email,
@@ -10,6 +11,7 @@ class OrderRepository {
             pedidos: cart
         };
 
+        await new MailingService().sendMail(email, name, phone, cart);
         return userData;
     };
 };
