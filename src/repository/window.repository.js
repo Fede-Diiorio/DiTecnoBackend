@@ -100,6 +100,15 @@ class WindowRepository {
         };
     };
 
+    async getTypeName(opening, style, type) {
+        const types = await this.getTypes(opening, style);
+        for (const typeName of types) {
+            if (typeName.slug === type) {
+                return typeName.name;
+            };
+        };
+    }
+
     async getColors(opening, style, type) {
         try {
             if (!opening || !style || !type) {

@@ -24,10 +24,10 @@ class MailingService {
                     <td>${product.type}</td>
                     <td>${product.style || product.design}</td>
                     <td>${product.color}</td>
-                    <td>${product.width} cm</td>
-                    <td>${product.height} cm</td>
-                    <td>${product.fixedWidth || 'Sin unidades en'} cm</td>
-                    <td>${product.fixedHeight || 'Sin unidades en'} cm</td>
+                    <td>${product.width}</td>
+                    <td>${product.height}</td>
+                    <td>${product.fixedWidth}</td>
+                    <td>${product.fixedHeight}</td>
                     <td>${product.quantity}</td>
                 </tr>
                 `;
@@ -46,7 +46,7 @@ class MailingService {
                         <tr>
                             <th>Producto</th>
                             <th>Sentido de apertura</th>
-                            <th>Especificidad de la ventana</th>
+                            <th>Especificidad del producto</th>
                             <th>Estilo o Diseño</th>
                             <th>Color</th>
                             <th>Ancho de la hoja móvil</th>

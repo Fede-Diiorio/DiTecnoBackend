@@ -68,6 +68,15 @@ class DoorRepository {
         };
     };
 
+    async getTypeName(opening, type) {
+        const types = await this.getTypes(opening);
+        for (const typeName of types) {
+            if (typeName.slug === type) {
+                return typeName.name;
+            };
+        };
+    };
+
     async getDesigns(opening, type) {
         try {
             if (!opening || !type) {
