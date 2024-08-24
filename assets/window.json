@@ -28,12 +28,34 @@
                 "image": "../Oscilobatiente.gif",
                 "type": [
                     {
-                        "name": "Una hoja móvil",
-                        "slug": "simple"
+                        "name": "Perilla a la izquierda",
+                        "slug": "simple-izquierda",
+                        "image": "../osci-simple-pomoIzquierda.jpg"
                     },
                     {
-                        "name": "Una hoja móvil y una fijo al lado",
-                        "slug": "lateral"
+                        "name": "Perilla a la derecha",
+                        "slug": "simple-derecha",
+                        "image": "../osci-simple-pomoIzquierda.jpg"
+                    },
+                    {
+                        "name": "Hoja por encima y perilla a la izquierda",
+                        "slug": "superpuesta-izquierda",
+                        "image": "../osci-hojaArriba-pomoIzquierda.jpg"
+                    },
+                    {
+                        "name": "Hoja por encima y perilla a la derecha",
+                        "slug": "superpuesta-derecha",
+                        "image": "../osci-hojaArriba-pomoDerecha.jpg"
+                    },
+                    {
+                        "name": "Hoja a la derecha y perilla a la izquierda",
+                        "slug": "lateral-izquierda",
+                        "image": "../osci-hojaDerecha-pomoIzquierda.jpg"
+                    },
+                    {
+                        "name": "Hoja izquierda y perilla a la derecha",
+                        "slug": "lateral-derecha",
+                        "image": "../osci-hojaIzquierda-pomoDerecha.jpg"
                     }
                 ]
             },
