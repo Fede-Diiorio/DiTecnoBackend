@@ -9,16 +9,40 @@
                 "image": "../Batiente.gif",
                 "type": [
                     {
-                        "name": "Una hoja móvil y una fijo abajo",
-                        "slug": "superpuesta"
+                        "name": "Perilla a la izquierda",
+                        "slug": "simple-izquierda",
+                        "image": "/public/bati-simple-pomoIzquierda.jpg",
+                        "casementQuantity": 1
                     },
                     {
-                        "name": "Una hoja móvil",
-                        "slug": "simple"
+                        "name": "Hoja a la derecha y perilla a la izquierda",
+                        "slug": "lateral-izquierda",
+                        "image": "/public/bati-hojaDerecha-pomoIzquierda.jpg",
+                        "casementQuantity": 2
                     },
                     {
-                        "name": "Una hoja móvil y una fijo al lado",
-                        "slug": "lateral"
+                        "name": "Hoja por encima y perilla a la izquierda",
+                        "slug": "superpuesta-izquierda",
+                        "image": "/public/bati-hojaArriba-pomoIzquierda.jpg",
+                        "casementQuantity": 2
+                    },
+                    {
+                        "name": "Perilla a la derecha",
+                        "slug": "simple-derecha",
+                        "image": "/public/bati-simple-pomoIzquierda.jpg",
+                        "casementQuantity": 1
+                    },
+                    {
+                        "name": "Hoja por encima y perilla a la derecha",
+                        "slug": "superpuesta-derecha",
+                        "image": "/public/bati-hojaArriba-pomoDerecha.jpg",
+                        "casementQuantity": 2
+                    },
+                    {
+                        "name": "Hoja izquierda y perilla a la derecha",
+                        "slug": "lateral-derecha",
+                        "image": "/public/bati-hojaIzquierda-pomoDerecha.jpg",
+                        "casementQuantity": 2
                     }
                 ]
             },
@@ -30,32 +54,38 @@
                     {
                         "name": "Perilla a la izquierda",
                         "slug": "simple-izquierda",
-                        "image": "/public/osci-simple-pomoIzquierda.jpg"
-                    },
-                    {
-                        "name": "Perilla a la derecha",
-                        "slug": "simple-derecha",
-                        "image": "/public/osci-simple-pomoIzquierda.jpg"
-                    },
-                    {
-                        "name": "Hoja por encima y perilla a la izquierda",
-                        "slug": "superpuesta-izquierda",
-                        "image": "/public/osci-hojaArriba-pomoIzquierda.jpg"
-                    },
-                    {
-                        "name": "Hoja por encima y perilla a la derecha",
-                        "slug": "superpuesta-derecha",
-                        "image": "/public/osci-hojaArriba-pomoDerecha.jpg"
+                        "image": "/public/osci-simple-pomoIzquierda.jpg",
+                        "casementQuantity": 1
                     },
                     {
                         "name": "Hoja a la derecha y perilla a la izquierda",
                         "slug": "lateral-izquierda",
-                        "image": "/public/osci-hojaDerecha-pomoIzquierda.jpg"
+                        "image": "/public/osci-hojaDerecha-pomoIzquierda.jpg",
+                        "casementQuantity": 2
+                    },
+                    {
+                        "name": "Hoja por encima y perilla a la izquierda",
+                        "slug": "superpuesta-izquierda",
+                        "image": "/public/osci-hojaArriba-pomoIzquierda.jpg",
+                        "casementQuantity": 2
+                    },
+                    {
+                        "name": "Perilla a la derecha",
+                        "slug": "simple-derecha",
+                        "image": "/public/osci-simple-pomoIzquierda.jpg",
+                        "casementQuantity": 1
+                    },
+                    {
+                        "name": "Hoja por encima y perilla a la derecha",
+                        "slug": "superpuesta-derecha",
+                        "image": "/public/osci-hojaArriba-pomoDerecha.jpg",
+                        "casementQuantity": 2
                     },
                     {
                         "name": "Hoja izquierda y perilla a la derecha",
                         "slug": "lateral-derecha",
-                        "image": "/public/osci-hojaIzquierda-pomoDerecha.jpg"
+                        "image": "/public/osci-hojaIzquierda-pomoDerecha.jpg",
+                        "casementQuantity": 2
                     }
                 ]
             },
@@ -86,24 +116,34 @@
                 "image": "../Proyectante.gif",
                 "type": [
                     {
-                        "name": "Una hoja móvil y una fijo abajo",
-                        "slug": "superpuesta"
+                        "name": "Hoja derecha y arriba",
+                        "slug": "lateral-derecha-superpuesta",
+                        "image": "/public/proye-hojaDerecha-arriba.jpg",
+                        "casementQuantity": 3
                     },
                     {
-                        "name": "Una hoja móvil",
-                        "slug": "simple"
+                        "name": "Hoja derecha",
+                        "slug": "lateral-derecha",
+                        "image": "/public/proye-hojaDerecha.jpg",
+                        "casementQuantity": 2
                     },
                     {
-                        "name": "Una hoja móvil y una fijo al lado",
-                        "slug": "lateral"
+                        "name": "Hoja izquierda y arriba",
+                        "slug": "lateral-izquierda-superpuesta",
+                        "image": "/public/proye-hojaIzquierda-arriba.jpg",
+                        "casementQuantity": 3
                     },
                     {
-                        "name": "Una hoja móvil, una fijo debajo y otro fijo al lado",
-                        "slug": "lateralSuperpuesto"
+                        "name": "Hoja izquierda",
+                        "slug": "lateral-izquierda",
+                        "image": "/public/proye-hojaIzquierda.jpg",
+                        "casementQuantity": 2
                     },
                     {
-                        "name": "Dos paños móviles arriba y una fijo abajo",
-                        "slug": "dobleSuperpuesto"
+                        "name": "Hoja simple",
+                        "slug": "simple",
+                        "image": "/public/proye-simple.jpg",
+                        "casementQuantity": 1
                     }
                 ]
             }
@@ -136,7 +176,9 @@
                 "type": [
                     {
                         "name": "Una hoja fijo",
-                        "slug": "simple"
+                        "slug": "simple",
+                        "image": "/public/fija.jpg",
+                        "casementQuantity": 1
                     }
                 ]
             }
