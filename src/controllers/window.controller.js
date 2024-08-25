@@ -38,13 +38,13 @@ class Controller {
         };
     };
 
-    async getWindowImage(req, res) {
+    async getTypeSpecification(req, res) {
         try {
             const opening = req.params.opening;
             const style = req.params.style;
             const type = req.params.type
-            const windowImage = await this.#windowRepository.getWindowImage(opening, style, type);
-            res.json(windowImage);
+            const typeSpecification = await this.#windowRepository.getTypeSpecification(opening, style, type);
+            res.json(typeSpecification);
         } catch (error) {
             res.status(error.status || 500).json(error);
         };

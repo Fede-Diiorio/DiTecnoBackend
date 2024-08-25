@@ -8,6 +8,6 @@ router.get('/:opening', (req, res) => new Controller().getStyles(req, res));
 
 router.get('/:opening/:style', (req, res) => new Controller().getTypes(req, res));
 
-router.get('/:opening/:style/:type', (req, res) => new Controller().getWindowImage(req, res));
+router.get('/:opening/:style/:type', (req, res) => new Controller().getTypeSpecification(req, res));
 
 module.exports = router;

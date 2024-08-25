@@ -10,6 +10,4 @@ router.get('/:opening/:type', (req, res) => new Controller().getDesigns(req, res
 
 router.get('/:opening/:type/:design', (req, res) => new Controller().getColors(req, res));
 
-router.post('/:opening/:type/:design/:color', (req, res) => new Controller())
-
 module.exports = router;

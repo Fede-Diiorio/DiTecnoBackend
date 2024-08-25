@@ -100,39 +100,22 @@ class WindowRepository {
         };
     };
 
-    async getTypeName(opening, style, type) {
-        const types = await this.getTypes(opening, style);
-        for (const typeName of types) {
-            if (typeName.slug === type) {
-                return typeName.name;
-            };
-        };
-    };
-
-    async getWindowImage(opening, style, type) {
-        const types = await this.getTypes(opening, style);
-        for (const typeImage of types) {
-            if (typeImage.slug === type) {
-                return typeImage;
-            };
-        };
-    };
-
-    async getColors(opening, style, type) {
+    async getTypeSpecification(opening, style, type) {
         try {
-            if (!opening || !style || !type) {
-                throw CustomError.createError({
-                    name: 'Error en la petición.',
-                    cause: 'No proporcionó datos suficientes relacionados a la apertura, con lo que la operación no se puede concluir.',
-                    message: 'Debe incluir una abertura válida en la URL.',
-                    status: 404
-                });
+            const types = await this.getTypes(opening, style);
+
+            for (const typeSpecification of types) {
+                if (typeSpecification.slug === type) {
+                    return typeSpecification;
+                };
             };
 
-            const colors = await this.#colorDao.getColors();
-            const colorsPayload = colors.map(color => new ColorOrDesignDTO(color));
-            return colorsPayload;
-
+            throw CustomError.createError({
+                name: 'No hay resultado.',
+                cause: 'No se pudo dar con las especificidades de ese tipo, es probable que el producto no exista.',
+                message: 'Error en la petición. El producto solicitado no existe.',
+                status: 404
+            });
         } catch (error) {
             throw CustomError.createError({
                 name: error.name || 'Error en tipo de aberturas.',
