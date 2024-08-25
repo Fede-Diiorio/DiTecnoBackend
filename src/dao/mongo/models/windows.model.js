@@ -5,6 +5,7 @@ const Schema = mongoose.Schema;
 const TypeSchema = new Schema({
     name: { type: String, required: true },
     slug: { type: String, required: true },
+    image: { type: String, required: true },
 });
 
 // Esquema para los estilos

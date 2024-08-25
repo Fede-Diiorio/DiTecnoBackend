@@ -107,7 +107,16 @@ class WindowRepository {
                 return typeName.name;
             };
         };
-    }
+    };
+
+    async getWindowImage(opening, style, type) {
+        const types = await this.getTypes(opening, style);
+        for (const typeImage of types) {
+            if (typeImage.slug === type) {
+                return typeImage;
+            };
+        };
+    };
 
     async getColors(opening, style, type) {
         try {

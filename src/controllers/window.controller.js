@@ -38,13 +38,13 @@ class Controller {
         };
     };
 
-    async getColors(req, res) {
+    async getWindowImage(req, res) {
         try {
             const opening = req.params.opening;
             const style = req.params.style;
             const type = req.params.type
-            const colors = await this.#windowRepository.getColors(opening, style, type);
-            res.json(colors);
+            const windowImage = await this.#windowRepository.getWindowImage(opening, style, type);
+            res.json(windowImage);
         } catch (error) {
             res.status(error.status || 500).json(error);
         };
