@@ -2,16 +2,21 @@
     {
         "name": "Nogal",
         "slug": "nogal",
-        "image": "https://drive.google.com/file/d/19JaaSBZrNd7QfysyjcJDB6iIeN6uWwHA/view?usp=drive_link"
+        "image": "https://imgur.com/l6SlubL"
     },
     {
-        "name": "Roble",
+        "name": "Roble Dorado",
         "slug": "roble",
-        "image": "https://drive.google.com/file/d/13ZvJYOg1BNigteJORwntnhN_rIPkbrQz/view?usp=drive_link"
+        "image": "https://imgur.com/uyTe2kD"
     },
     {
-        "name": "Liso",
-        "slug": "liso",
-        "image": "https://drive.google.com/file/d/1L-aoEdcZ5jxRLviz5GVvXh1JxgcjB6rO/view?usp=drive_link"
+        "name": "Blanco",
+        "slug": "blanco",
+        "image": "https://imgur.com/r8eLie3"
+    },
+    {
+        "name": "Negro",
+        "slug": "negro",
+        "image": "https://i.imgur.com/7s8zMoo.jpeg"
     }
 ]
