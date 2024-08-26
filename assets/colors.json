@@ -2,21 +2,21 @@
     {
         "name": "Nogal",
         "slug": "nogal",
-        "image": "https://imgur.com/l6SlubL"
+        "image": "/nogal.webp"
     },
     {
         "name": "Roble Dorado",
         "slug": "roble",
-        "image": "https://imgur.com/uyTe2kD"
+        "image": "/roble.webp"
     },
     {
         "name": "Blanco",
         "slug": "blanco",
-        "image": "https://imgur.com/r8eLie3"
+        "image": "/blanco.webp"
     },
     {
         "name": "Negro",
         "slug": "negro",
-        "image": "https://i.imgur.com/7s8zMoo.jpeg"
+        "image": "/negro.webp"
     }
 ]
