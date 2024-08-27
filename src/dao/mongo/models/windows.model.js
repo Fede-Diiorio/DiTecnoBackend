@@ -6,6 +6,7 @@ const TypeSchema = new Schema({
     name: { type: String, required: true },
     slug: { type: String, required: true },
     image: { type: String, required: true },
+    casementQuantity: { type: Number, required: true },
 });
 
 // Esquema para los estilos

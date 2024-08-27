@@ -11,37 +11,37 @@
                     {
                         "name": "Hoja simple y mano izquierda",
                         "slug": "hs-pi",
-                        "image": "/public/bati-simple-pomoIzquierda.webp",
+                        "image": "/prac-simple-pomoIzquierda.webp",
                         "casementQuantity": 1
                     },
                     {
                         "name": "Hoja a la derecha y mano izquierda",
                         "slug": "hd-pi",
-                        "image": "/public/bati-hojaDerecha-pomoIzquierda.webp",
+                        "image": "/prac-hojaDerecha-pomoIzquierda.webp",
                         "casementQuantity": 2
                     },
                     {
                         "name": "Hoja por encima y mano izquierda",
                         "slug": "har-pi",
-                        "image": "/public/bati-hojaArriba-pomoIzquierda.webp",
+                        "image": "/prac-hojaArriba-pomoIzquierda.webp",
                         "casementQuantity": 2
                     },
                     {
                         "name": "Hoja simple y mano derecha",
                         "slug": "hs-pd",
-                        "image": "/public/bati-simple-pomoDerecha.webp",
+                        "image": "/prac-simple-pomoDerecha.webp",
                         "casementQuantity": 1
                     },
                     {
                         "name": "Hoja izquierda y mano derecha",
                         "slug": "hi-pd",
-                        "image": "/public/bati-hojaIzquierda-pomoDerecha.webp",
+                        "image": "/prac-hojaIzquierda-pomoDerecha.webp",
                         "casementQuantity": 2
                     },
                     {
                         "name": "Hoja por encima y mano derecha",
                         "slug": "har-pd",
-                        "image": "/public/bati-hojaArriba-pomoDerecha.webp",
+                        "image": "/prac-hojaArriba-pomoDerecha.webp",
                         "casementQuantity": 2
                     }
                 ]
@@ -54,37 +54,37 @@
                     {
                         "name": "Hoja simple y mano izquierda",
                         "slug": "hs-pi",
-                        "image": "/public/osci-simple-pomoIzquierda.webp",
+                        "image": "/osci-simple-pomoIzquierda.webp",
                         "casementQuantity": 1
                     },
                     {
                         "name": "Hoja a la derecha y mano izquierda",
                         "slug": "hd-pi",
-                        "image": "/public/osci-hojaDerecha-pomoIzquierda.webp",
+                        "image": "/osci-hojaDerecha-pomoIzquierda.webp",
                         "casementQuantity": 2
                     },
                     {
                         "name": "Hoja por encima y mano izquierda",
                         "slug": "har-pi",
-                        "image": "/public/osci-hojaArriba-pomoIzquierda.webp",
+                        "image": "/osci-hojaArriba-pomoIzquierda.webp",
                         "casementQuantity": 2
                     },
                     {
                         "name": "Hoja simple y mano derecha",
                         "slug": "hs-pd",
-                        "image": "/public/osci-simple-pomoDerecha.webp",
+                        "image": "/osci-simple-pomoDerecha.webp",
                         "casementQuantity": 1
                     },
                     {
                         "name": "Hoja izquierda y mano derecha",
                         "slug": "hi-pd",
-                        "image": "/public/osci-hojaIzquierda-pomoDerecha.webp",
+                        "image": "/osci-hojaIzquierda-pomoDerecha.webp",
                         "casementQuantity": 2
                     },
                     {
                         "name": "Hoja por encima y mano derecha",
                         "slug": "har-pd",
-                        "image": "/public/osci-hojaArriba-pomoDerecha.webp",
+                        "image": "/osci-hojaArriba-pomoDerecha.webp",
                         "casementQuantity": 2
                     }
                 ]
@@ -118,31 +118,31 @@
                     {
                         "name": "Hoja derecha y arriba",
                         "slug": "hdar",
-                        "image": "/public/proye-hojaDerecha-arriba.webp",
+                        "image": "/proye-hojaDerecha-arriba.webp",
                         "casementQuantity": 3
                     },
                     {
                         "name": "Hoja derecha",
                         "slug": "hd",
-                        "image": "/public/proye-hojaDerecha.webp",
+                        "image": "/proye-hojaDerecha.webp",
                         "casementQuantity": 2
                     },
                     {
                         "name": "Hoja izquierda y arriba",
                         "slug": "hiar",
-                        "image": "/public/proye-hojaIzquierda-arriba.webp",
+                        "image": "/proye-hojaIzquierda-arriba.webp",
                         "casementQuantity": 3
                     },
                     {
                         "name": "Hoja izquierda",
                         "slug": "hi",
-                        "image": "/public/proye-hojaIzquierda.webp",
+                        "image": "/proye-hojaIzquierda.webp",
                         "casementQuantity": 2
                     },
                     {
                         "name": "Hoja simple",
                         "slug": "hs",
-                        "image": "/public/proye-simple.webp",
+                        "image": "/proye-simple.webp",
                         "casementQuantity": 1
                     }
                 ]
@@ -178,7 +178,7 @@
                     {
                         "name": "Una hoja fijo",
                         "slug": "hf",
-                        "image": "/public/fija.webp",
+                        "image": "/fija.webp",
                         "casementQuantity": 1
                     }
                 ]
