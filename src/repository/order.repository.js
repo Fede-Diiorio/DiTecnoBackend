@@ -19,12 +19,14 @@ class OrderRepository {
         const products = [];
 
         for (const prod of cart) {
-            if (prod.product === 'puerta') {
-                const type = await this.#doorRepository.getTypeName(prod.opening, prod.type);
-                products.push(new DoorDTO(prod, type));
-            } else {
-                const type = await this.#windowRepository.getTypeName(prod.opening, prod.style, prod.type);
+            if (prod.product === 'ventana') {
+                const type = await this.#windowRepository.getTypeSpecification(prod.opening, prod.style, prod.type);
                 products.push(new WindowDTO(prod, type));
+                console.log(products);
+            } else {
+                // const type = await this.#doorRepository.getTypeName(prod.opening, prod.type);
+                // products.push(new DoorDTO(prod, type));
+                products.push('Puertas');
             }
         };
 

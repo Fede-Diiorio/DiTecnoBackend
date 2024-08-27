@@ -23,7 +23,7 @@ class MailingService {
                     <td>${product.opening}</td>
                     <td>${product.type}</td>
                     <td>${product.style || product.design}</td>
-                    <td>${product.color}</td>
+                    <td>${product.colors}</td>
                     <td>${product.width}</td>
                     <td>${product.height}</td>
                     <td>${product.fixedWidth}</td>
