@@ -11,37 +11,37 @@
                     {
                         "name": "Hoja simple y mano izquierda",
                         "slug": "hs-pi",
-                        "image": "/prac-simple-pomoIzquierda.webp",
+                        "image": "https://i.imgur.com/pvaU3o8.jpeg",
                         "casementQuantity": 1
                     },
                     {
                         "name": "Hoja a la derecha y mano izquierda",
                         "slug": "hd-pi",
-                        "image": "/prac-hojaDerecha-pomoIzquierda.webp",
+                        "image": "https://i.imgur.com/T5JO0kY.jpeg",
                         "casementQuantity": 2
                     },
                     {
                         "name": "Hoja por encima y mano izquierda",
                         "slug": "har-pi",
-                        "image": "/prac-hojaArriba-pomoIzquierda.webp",
+                        "image": "https://i.imgur.com/WPi0V4z.jpeg",
                         "casementQuantity": 2
                     },
                     {
                         "name": "Hoja simple y mano derecha",
                         "slug": "hs-pd",
-                        "image": "/prac-simple-pomoDerecha.webp",
+                        "image": "https://i.imgur.com/X09wHig.jpeg",
                         "casementQuantity": 1
                     },
                     {
                         "name": "Hoja izquierda y mano derecha",
                         "slug": "hi-pd",
-                        "image": "/prac-hojaIzquierda-pomoDerecha.webp",
+                        "image": "https://i.imgur.com/OZHEQRy.jpeg",
                         "casementQuantity": 2
                     },
                     {
                         "name": "Hoja por encima y mano derecha",
                         "slug": "har-pd",
-                        "image": "/prac-hojaArriba-pomoDerecha.webp",
+                        "image": "https://i.imgur.com/BeH0GcA.jpeg",
                         "casementQuantity": 2
                     }
                 ]
@@ -54,37 +54,37 @@
                     {
                         "name": "Hoja simple y mano izquierda",
                         "slug": "hs-pi",
-                        "image": "/osci-simple-pomoIzquierda.webp",
+                        "image": "https://i.imgur.com/JVoXxGv.jpeg",
                         "casementQuantity": 1
                     },
                     {
                         "name": "Hoja a la derecha y mano izquierda",
                         "slug": "hd-pi",
-                        "image": "/osci-hojaDerecha-pomoIzquierda.webp",
+                        "image": "https://i.imgur.com/fgPMx6A.jpeg",
                         "casementQuantity": 2
                     },
                     {
                         "name": "Hoja por encima y mano izquierda",
                         "slug": "har-pi",
-                        "image": "/osci-hojaArriba-pomoIzquierda.webp",
+                        "image": "https://i.imgur.com/cnnAo7T.jpeg",
                         "casementQuantity": 2
                     },
                     {
                         "name": "Hoja simple y mano derecha",
                         "slug": "hs-pd",
-                        "image": "/osci-simple-pomoDerecha.webp",
+                        "image": "https://i.imgur.com/nhtlsGz.jpeg",
                         "casementQuantity": 1
                     },
                     {
                         "name": "Hoja izquierda y mano derecha",
                         "slug": "hi-pd",
-                        "image": "/osci-hojaIzquierda-pomoDerecha.webp",
+                        "image": "https://i.imgur.com/qDv87pL.jpeg",
                         "casementQuantity": 2
                     },
                     {
                         "name": "Hoja por encima y mano derecha",
                         "slug": "har-pd",
-                        "image": "/osci-hojaArriba-pomoDerecha.webp",
+                        "image": "https://i.imgur.com/nIrHba5.jpeg",
                         "casementQuantity": 2
                     }
                 ]

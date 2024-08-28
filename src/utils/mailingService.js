@@ -49,10 +49,10 @@ class MailingService {
                             <th>Especificidad del producto</th>
                             <th>Estilo o Diseño</th>
                             <th>Color</th>
-                            <th>Ancho de la hoja móvil</th>
-                            <th>Alto de la hoja móvil</th>
-                            <th>Ancho de la hoja fija</th>
-                            <th>Alto de la hoja fija</th>
+                            <th>Ancho</th>
+                            <th>Alto</th>
+                            <th>Ancho de la hoja</th>
+                            <th>Alto de la hoja</th>
                             <th>Cantidad</th>
                         </tr>
                     </thead>
