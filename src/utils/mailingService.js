@@ -17,19 +17,19 @@ class MailingService {
             });
 
             const productDetails = cart.map((product) => {
+
+                const colors = product.colors.map(color => {
+                    return color;
+                }).join(' - ');
+
                 return `
-                <tr>
-                    <td>${product.product}</td>
-                    <td>${product.opening}</td>
-                    <td>${product.type}</td>
-                    <td>${product.style || product.design}</td>
-                    <td>${product.colors}</td>
-                    <td>${product.width}</td>
-                    <td>${product.height}</td>
-                    <td>${product.fixedWidth}</td>
-                    <td>${product.fixedHeight}</td>
-                    <td>${product.quantity}</td>
-                </tr>
+                <h4>{product.product} {product.style}</h4>
+                <img src=${product.type} alt="Imagen del ${product.product} ${product.style}" />
+                <p><strong>Ancho: </strong>${product.width}</p>
+                <p><strong>Alto: </strong>${product.height}</p>
+                <p><strong>Medida de hoja: </strong>${product.fixedWidth}</p>
+                <p><strong>Cantidad: </strong>${product.quantity}</p>
+                <p><strong>Colores requeridos: </strong>${colors}</p>
                 `;
             }).join('');
 
@@ -41,25 +41,8 @@ class MailingService {
                 <p><strong>Teléfono: </strong>${phone}</p>
 
                 <h3>Productos solicitados:</h3>
-                <table border="1" cellpadding="5" cellspacing="0">
-                    <thead>
-                        <tr>
-                            <th>Producto</th>
-                            <th>Sentido de apertura</th>
-                            <th>Especificidad del producto</th>
-                            <th>Estilo o Diseño</th>
-                            <th>Color</th>
-                            <th>Ancho</th>
-                            <th>Alto</th>
-                            <th>Ancho de la hoja</th>
-                            <th>Alto de la hoja</th>
-                            <th>Cantidad</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${productDetails}
-                    </tbody>
-                </table>
+                
+                ${productDetails}
             </div>
             `;
 
