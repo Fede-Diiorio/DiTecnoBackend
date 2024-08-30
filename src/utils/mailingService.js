@@ -17,31 +17,30 @@ class MailingService {
             });
 
             const productDetails = cart.map((product) => {
-
-                const colors = product.colors.map(color => {
-                    return color;
-                }).join(' - ');
+                const colors = product.colors.map(color => color).join(' - ');
 
                 return `
-                <h4>{product.product} {product.style}</h4>
-                <img src=${product.type} alt="Imagen del ${product.product} ${product.style}" />
-                <p><strong>Ancho: </strong>${product.width}</p>
-                <p><strong>Alto: </strong>${product.height}</p>
-                <p><strong>Medida de hoja: </strong>${product.fixedWidth}</p>
-                <p><strong>Cantidad: </strong>${product.quantity}</p>
-                <p><strong>Colores requeridos: </strong>${colors}</p>
+                <div style="border-bottom: 1px solid #ddd; padding: 10px; margin-bottom: 10px;">
+                    <h3 style="color: #333;">${product.product} ${product.style}</h3>
+                    <img src="${product.type}" alt="Imagen del ${product.product} ${product.style}" style="max-width: 300px; height: auto;" />
+                    <p style="margin: 5px 0;"><strong>Ancho: </strong>${product.width}</p>
+                    <p style="margin: 5px 0;"><strong>Alto: </strong>${product.height}</p>
+                    <p style="margin: 5px 0;"><strong>Medida de hoja: </strong>${product.casement}</p>
+                    <p style="margin: 5px 0;"><strong>Cantidad: </strong>${product.quantity}</p>
+                    <p style="margin: 5px 0;"><strong>Colores requeridos: </strong>${colors}</p>
+                </div>
                 `;
             }).join('');
 
             const htmlContent = `
-            <div>
-                <h2>Solicitud de presupuesto por ${name}</h2>
-                <h3>Datos del cliente:</h3>
-                <p><strong>Email: </strong>${email}</p>
-                <p><strong>Teléfono: </strong>${phone}</p>
+            <div style="font-family: Arial, sans-serif; color: #444;">
+                <h2 >Solicitud de presupuesto por ${name}</h2>
+                <h3 style="color: #333;">Datos del cliente:</h3>
+                <p style="margin: 5px 0;"><strong>Email: </strong>${email}</p>
+                <p style="margin: 5px 0;"><strong>Teléfono: </strong>${phone}</p>
+                <p style="margin: 5px 0;"><strong>Nombre: </strong>${name}</p>
 
-                <h3>Productos solicitados:</h3>
-                
+                <h3 style="color: #333;">Productos solicitados:</h3>
                 ${productDetails}
             </div>
             `;

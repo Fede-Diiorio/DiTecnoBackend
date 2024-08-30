@@ -7,8 +7,8 @@ class WindowDTO {
         this.colors = data.colors;
         this.width = `${data.width} cm`;
         this.height = `${data.height} cm`;
-        this.fixedWidth = data.fixedWidth ? `${data.fixedWidth} cm` : 'No requerido';
-        this.fixedHeight = data.fixedHeight ? `${data.fixedHeight} cm` : 'No requerido';
+        this.casement = data.casement ? `${data.casement} cm` : 'No requerido';
+        this.casement2 = data.casement2 ? `${data.casement2} cm` : 'No requerido';
         this.quantity = data.quantity;
     };
 };
