@@ -27,6 +27,7 @@ class MailingService {
                     <p style="margin: 5px 0;"><strong>Alto: </strong>${product.height}</p>
                     <p style="margin: 5px 0;"><strong>Medida de hoja: </strong>${product.casement}</p>
                     <p style="margin: 5px 0;"><strong>Cantidad: </strong>${product.quantity}</p>
+                    <p style="margin: 5px 0;"><strong>Vidrio : </strong>DVH ${glassType}</p>
                     <p style="margin: 5px 0;"><strong>Colores requeridos: </strong>${colors}</p>
                 </div>
                 `;
