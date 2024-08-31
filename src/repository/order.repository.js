@@ -37,6 +37,7 @@ class OrderRepository {
             pedidos: products
         };
 
+
         await new MailingService().sendMail(email, name, phone, products);
         return userData;
     };
