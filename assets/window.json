@@ -10,37 +10,37 @@
                 "type": [
                     {
                         "name": "Hoja simple y mano izquierda",
-                        "slug": "hs-pi",
+                        "slug": "hs-mi",
                         "image": "https://i.imgur.com/pvaU3o8.jpeg",
                         "casementQuantity": 1
                     },
                     {
                         "name": "Hoja a la derecha y mano izquierda",
-                        "slug": "hd-pi",
+                        "slug": "hd-mi",
                         "image": "https://i.imgur.com/T5JO0kY.jpeg",
                         "casementQuantity": 2
                     },
                     {
                         "name": "Hoja por encima y mano izquierda",
-                        "slug": "har-pi",
+                        "slug": "har-mi",
                         "image": "https://i.imgur.com/WPi0V4z.jpeg",
                         "casementQuantity": 2
                     },
                     {
                         "name": "Hoja simple y mano derecha",
-                        "slug": "hs-pd",
+                        "slug": "hs-md",
                         "image": "https://i.imgur.com/X09wHig.jpeg",
                         "casementQuantity": 1
                     },
                     {
                         "name": "Hoja izquierda y mano derecha",
-                        "slug": "hi-pd",
+                        "slug": "hi-md",
                         "image": "https://i.imgur.com/OZHEQRy.jpeg",
                         "casementQuantity": 2
                     },
                     {
                         "name": "Hoja por encima y mano derecha",
-                        "slug": "har-pd",
+                        "slug": "har-md",
                         "image": "https://i.imgur.com/BeH0GcA.jpeg",
                         "casementQuantity": 2
                     }
@@ -53,37 +53,37 @@
                 "type": [
                     {
                         "name": "Hoja simple y mano izquierda",
-                        "slug": "hs-pi",
+                        "slug": "hs-mi",
                         "image": "https://i.imgur.com/JVoXxGv.jpeg",
                         "casementQuantity": 1
                     },
                     {
                         "name": "Hoja a la derecha y mano izquierda",
-                        "slug": "hd-pi",
+                        "slug": "hd-mi",
                         "image": "https://i.imgur.com/fgPMx6A.jpeg",
                         "casementQuantity": 2
                     },
                     {
                         "name": "Hoja por encima y mano izquierda",
-                        "slug": "har-pi",
+                        "slug": "har-mi",
                         "image": "https://i.imgur.com/cnnAo7T.jpeg",
                         "casementQuantity": 2
                     },
                     {
                         "name": "Hoja simple y mano derecha",
-                        "slug": "hs-pd",
+                        "slug": "hs-md",
                         "image": "https://i.imgur.com/nhtlsGz.jpeg",
                         "casementQuantity": 1
                     },
                     {
                         "name": "Hoja izquierda y mano derecha",
-                        "slug": "hi-pd",
+                        "slug": "hi-md",
                         "image": "https://i.imgur.com/qDv87pL.jpeg",
                         "casementQuantity": 2
                     },
                     {
                         "name": "Hoja por encima y mano derecha",
-                        "slug": "har-pd",
+                        "slug": "har-md",
                         "image": "https://i.imgur.com/nIrHba5.jpeg",
                         "casementQuantity": 2
                     }
@@ -95,12 +95,34 @@
                 "image": "/Banderola.gif",
                 "type": [
                     {
-                        "name": "Una hoja móvil",
-                        "slug": "simple"
+                        "name": "Hoja derecha y arriba",
+                        "slug": "hdar",
+                        "image": "https://i.imgur.com/ToSnTt5.jpeg",
+                        "casementQuantity": 3
                     },
                     {
-                        "name": "Una hoja móvil y una fijo al lado",
-                        "slug": "lateral"
+                        "name": "Hoja derecha",
+                        "slug": "hd",
+                        "image": "https://i.imgur.com/ToSnTt5.jpeg",
+                        "casementQuantity": 2
+                    },
+                    {
+                        "name": "Hoja izquierda y arriba",
+                        "slug": "hiar",
+                        "image": "https://i.imgur.com/ToSnTt5.jpeg",
+                        "casementQuantity": 3
+                    },
+                    {
+                        "name": "Hoja izquierda",
+                        "slug": "hi",
+                        "image": "https://i.imgur.com/ToSnTt5.jpeg",
+                        "casementQuantity": 2
+                    },
+                    {
+                        "name": "Hoja simple",
+                        "slug": "hs",
+                        "image": "https://i.imgur.com/ToSnTt5.jpeg",
+                        "casementQuantity": 1
                     }
                 ]
             }
@@ -116,33 +138,33 @@
                 "image": "/Proyectante.gif",
                 "type": [
                     {
-                        "name": "Hoja derecha y arriba",
+                        "name": "Hoja a la derecha y arriba",
                         "slug": "hdar",
-                        "image": "/proye-hojaDerecha-arriba.webp",
+                        "image": "https://i.imgur.com/8fT8yvM.jpeg",
                         "casementQuantity": 3
                     },
                     {
-                        "name": "Hoja derecha",
+                        "name": "Hoja a la derecha",
                         "slug": "hd",
-                        "image": "/proye-hojaDerecha.webp",
+                        "image": "https://i.imgur.com/3vqzpCs.jpeg",
                         "casementQuantity": 2
                     },
                     {
-                        "name": "Hoja izquierda y arriba",
+                        "name": "Hoja a la izquierda y arriba",
                         "slug": "hiar",
-                        "image": "/proye-hojaIzquierda-arriba.webp",
+                        "image": "https://i.imgur.com/FjUCNxr.jpeg",
                         "casementQuantity": 3
                     },
                     {
-                        "name": "Hoja izquierda",
+                        "name": "Hoja a la izquierda",
                         "slug": "hi",
-                        "image": "/proye-hojaIzquierda.webp",
+                        "image": "https://i.imgur.com/SHaFta4.jpeg",
                         "casementQuantity": 2
                     },
                     {
                         "name": "Hoja simple",
                         "slug": "hs",
-                        "image": "/proye-simple.webp",
+                        "image": "https://i.imgur.com/ujy81lo.jpeg",
                         "casementQuantity": 1
                     }
                 ]
@@ -160,7 +182,9 @@
                 "type": [
                     {
                         "name": "Dos paños móviles",
-                        "slug": "doble"
+                        "slug": "hc",
+                        "image": "https://i.imgur.com/ujy81lo.jpeg",
+                        "casementQuantity": 1
                     }
                 ]
             }
@@ -173,12 +197,12 @@
             {
                 "name": "Fija",
                 "slug": "fija",
-                "image": "/Fija.webp",
+                "image": "/Fija.jpg",
                 "type": [
                     {
-                        "name": "Una hoja fijo",
+                        "name": "Una hoja fija",
                         "slug": "hf",
-                        "image": "/fija.webp",
+                        "image": "https://i.imgur.com/ujy81lo.jpeg",
                         "casementQuantity": 1
                     }
                 ]
