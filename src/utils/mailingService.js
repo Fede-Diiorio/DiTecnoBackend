@@ -1,5 +1,6 @@
 import 'dotenv/config'; // Reemplaza el require('dotenv').config()
 import CustomError from './customErrors.js';
+import nodemailer from 'nodemailer'
 
 export default class MailingService {
     constructor() { }
@@ -64,6 +65,7 @@ export default class MailingService {
 
             return { email, name, phone };
         } catch (error) {
+            console.log(error);
             throw CustomError.createError({
                 name: 'Error al enviar email',
                 cause: 'Ocurrió un error y no se pudo enviar el email al destinatario.',
