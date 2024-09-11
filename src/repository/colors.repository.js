@@ -1,7 +1,7 @@
-const ColorDao = require('../dao/mongo/color.dao');
-const { ColorOrDesignDTO } = require('../dto');
+import ColorDao from '../dao/mongo/color.dao.js';
+import { ColorOrDesignDTO } from '../dto/index.js'
 
-class ColorRepository {
+export default class ColorRepository {
 
     #colorDao;
 
@@ -25,5 +25,3 @@ class ColorRepository {
         };
     };
 };
-
-module.exports = { ColorRepository };

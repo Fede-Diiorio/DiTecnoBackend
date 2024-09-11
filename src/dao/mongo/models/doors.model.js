@@ -1,4 +1,5 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
+
 const { Schema } = mongoose;
 
 // Esquema para las aperturas
@@ -14,4 +15,4 @@ const DoorSchema = new Schema({
     type: [TypeSchema],
 });
 
-module.exports = mongoose.model('Door', DoorSchema, 'doors');
+export default mongoose.model('Door', DoorSchema, 'doors');

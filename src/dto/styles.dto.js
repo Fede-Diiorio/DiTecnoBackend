@@ -1,4 +1,4 @@
-class StylesDTO {
+export default class StylesDTO {
     constructor(data) {
         return data.style.map(s => ({
             name: s.name,
@@ -8,5 +8,3 @@ class StylesDTO {
         }));
     };
 };
-
-module.exports = StylesDTO;

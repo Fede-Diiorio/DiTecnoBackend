@@ -1,10 +1,10 @@
-const { CustomError } = require('../utils/customErrors');
-const { MailingService } = require('../utils/mailingService');
-const { DoorRepository } = require('../repository/door.repository');
-const { WindowRepository } = require('../repository/window.repository');
-const { DoorDTO, WindowDTO } = require('../dto');
+import CustomError from '../utils/customErrors.js';
+import MailingService from '../utils/mailingService.js';
+import DoorRepository from '../repository/door.repository.js';
+import WindowRepository from '../repository/window.repository.js';
+import { DoorDTO, WindowDTO } from '../dto/index.js';
 
-class OrderRepository {
+export default class OrderRepository {
 
     #doorRepository;
     #windowRepository;
@@ -42,5 +42,3 @@ class OrderRepository {
         return userData;
     };
 };
-
-module.exports = { OrderRepository };

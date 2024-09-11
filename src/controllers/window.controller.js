@@ -1,6 +1,6 @@
-const { WindowRepository } = require('../repository/window.repository');
+import WindowRepository from '../repository/window.repository.js';
 
-class Controller {
+export default class Controller {
 
     #windowRepository;
 
@@ -48,7 +48,5 @@ class Controller {
         } catch (error) {
             res.status(error.status || 500).json(error);
         };
-    }
+    };
 };
-
-module.exports = { Controller };

@@ -1,10 +1,10 @@
-const DoorDao = require('../dao/mongo/door.dao');
-const ColorDao = require('../dao/mongo/color.dao');
-const DesignDao = require('../dao/mongo/design.dao');
-const { OpeningsDTO, DoorTypeDTO, ColorOrDesignDTO } = require('../dto');
-const { CustomError } = require('../utils/customErrors');
+import DoorDao from '../dao/mongo/door.dao.js';
+import ColorDao from '../dao/mongo/color.dao.js';
+import DesignDao from '../dao/mongo/design.dao.js';
+import { OpeningsDTO, DoorTypeDTO, ColorOrDesignDTO } from '../dto/index.js';
+import CustomError from '../utils/customErrors.js';
 
-class DoorRepository {
+export default class DoorRepository {
     #doorDao;
     #colorDao;
     #desingDao;
@@ -171,5 +171,3 @@ class DoorRepository {
         console.log(opening, type, design, color, data);
     }
 };
-
-module.exports = { DoorRepository };

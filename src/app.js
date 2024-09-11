@@ -1,10 +1,10 @@
-require('dotenv').config();
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
+import 'dotenv/config'; // Reemplaza el require('dotenv').config()
+import express from 'express';
+import mongoose from 'mongoose';
+import cors from 'cors';
 
 // Routes
-const { WindowRouter, DoorRouter, OrderRouter, ColorRouter } = require('./routes');
+import { WindowRouter, DoorRouter, OrderRouter, ColorRouter } from './routes/index.js'; // Asegúrate de que los archivos exporten correctamente
 
 // Environment
 const port = process.env.PORT || 3000;
@@ -25,13 +25,16 @@ app.use('/api/orden', OrderRouter);
 app.use('/api/colores', ColorRouter);
 
 const main = async () => {
-    await mongoose.connect(mongoUrl, { dbName })
-        .then(() => console.log('Connected to MongoDB'))
-        .catch(err => console.error('Error al conectar a MongoDB: ', err));
+    try {
+        await mongoose.connect(mongoUrl, { dbName });
+        console.log('Connected to MongoDB');
 
-    app.listen(port, () => {
-        console.log(`Listening on ${port}`);
-    });
+        app.listen(port, () => {
+            console.log(`Listening on ${port}`);
+        });
+    } catch (err) {
+        console.error('Error al conectar a MongoDB: ', err);
+    }
 };
 
 main();

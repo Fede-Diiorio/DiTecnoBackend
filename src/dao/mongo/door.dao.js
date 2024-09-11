@@ -1,6 +1,6 @@
-const { Doors } = require('./models');
+import { Doors } from './models/index.js';
 
-class DoorDao {
+export default class DoorDao {
     async getOpenings() {
         return await Doors.find();
     };
@@ -9,5 +9,3 @@ class DoorDao {
         return await Doors.find({ slug: opening }, 'type');
     };
 };
-
-module.exports = DoorDao;

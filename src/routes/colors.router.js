@@ -1,7 +1,8 @@
-const { Router } = require('express');
+import { Router } from 'express';
+import Controller from '../controllers/colors.controller.js';
+
 const router = Router();
-const { Controller } = require('../controllers/colors.controller');
 
 router.get('/', (_, res) => new Controller().getColors(res));
 
-module.exports = router
+export default router;

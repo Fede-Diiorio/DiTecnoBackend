@@ -1,6 +1,6 @@
-const { OrderRepository } = require('../repository/order.repository');
+import OrderRepository from '../repository/order.repository.js';
 
-class Controller {
+export default class Controller {
 
     #orderRepository;
 
@@ -18,5 +18,3 @@ class Controller {
         };
     };
 };
-
-module.exports = { Controller };

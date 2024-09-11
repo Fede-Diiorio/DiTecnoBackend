@@ -1,9 +1,7 @@
-const { Colors } = require('./models');
+import { Colors } from './models/index.js';
 
-class ColorDao {
+export default class ColorDao {
     async getColors() {
         return await Colors.find();
     };
 };
-
-module.exports = ColorDao;

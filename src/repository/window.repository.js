@@ -1,9 +1,9 @@
-const WindowDao = require('../dao/mongo/window.dao');
-const ColorDao = require('../dao/mongo/color.dao');
-const { OpeningsDTO, StylesDTO, TypeDTO, ColorOrDesignDTO } = require('../dto');
-const { CustomError } = require('../utils/customErrors');
+import WindowDao from '../dao/mongo/window.dao.js';
+import ColorDao from '../dao/mongo/color.dao.js';
+import { OpeningsDTO, StylesDTO, TypeDTO, ColorOrDesignDTO } from '../dto/index.js'
+import CustomError from '../utils/customErrors.js';
 
-class WindowRepository {
+export default class WindowRepository {
     #windowDao;
     #colorDao;
 
@@ -126,5 +126,3 @@ class WindowRepository {
         };
     };
 };
-
-module.exports = { WindowRepository };

@@ -1,6 +1,7 @@
-const { Router } = require('express');
+import { Router } from 'express';
+import Controller from '../controllers/window.controller.js';
+
 const router = Router();
-const { Controller } = require('../controllers/window.controller');
 
 router.get('/', (_, res) => new Controller().getOpening(res));
 
@@ -10,4 +11,4 @@ router.get('/:opening/:style', (req, res) => new Controller().getTypes(req, res)
 
 router.get('/:opening/:style/:type', (req, res) => new Controller().getTypeSpecification(req, res));
 
-module.exports = router;
+export default router;

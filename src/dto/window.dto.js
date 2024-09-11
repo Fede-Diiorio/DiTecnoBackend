@@ -1,4 +1,4 @@
-class WindowDTO {
+export default class WindowDTO {
     constructor(data, type) {
         this.product = data.product;
         this.opening = data.opening;
@@ -13,5 +13,3 @@ class WindowDTO {
         this.quantity = data.quantity;
     };
 };
-
-module.exports = WindowDTO;

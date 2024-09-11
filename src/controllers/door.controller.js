@@ -1,6 +1,6 @@
-const { DoorRepository } = require('../repository/door.repository');
+import DoorRepository from '../repository/door.repository.js';
 
-class Controller {
+export default class Controller {
 
     #doorRepository;
 
@@ -61,8 +61,6 @@ class Controller {
             res.json(product);
         } catch (error) {
             res.status(error.status || 500).json(error || 'Error inesperado.');
-        }
-    }
+        };
+    };
 };
-
-module.exports = { Controller };

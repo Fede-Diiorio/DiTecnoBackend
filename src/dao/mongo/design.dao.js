@@ -1,9 +1,7 @@
-const { Designs } = require('./models');
+import { Designs } from './models/index.js';
 
-class DesignDao {
+export default class DesignDao {
     async getDesigns() {
         return await Designs.find();
     };
 };
-
-module.exports = DesignDao;

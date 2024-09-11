@@ -1,4 +1,5 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
+
 const Schema = mongoose.Schema;
 
 // Esquema para los tipos
@@ -24,6 +25,6 @@ const WindowSchema = new Schema({
     style: [StyleSchema]
 });
 
-module.exports = mongoose.model('Window', WindowSchema, 'windows');
+export default mongoose.model('Window', WindowSchema, 'windows');
 
 

@@ -1,4 +1,5 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
+
 const { Schema } = mongoose;
 
 const ColorSchema = new Schema({
@@ -7,4 +8,4 @@ const ColorSchema = new Schema({
     image: { type: String, required: true }
 });
 
-module.exports = mongoose.model('Color', ColorSchema, "colors");
+export default mongoose.model('Color', ColorSchema, "colors");

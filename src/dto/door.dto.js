@@ -1,4 +1,4 @@
-class DoorDTO {
+export default class DoorDTO {
     constructor(data, type) {
         this.product = data.product;
         this.opening = data.opening;
@@ -12,5 +12,3 @@ class DoorDTO {
         this.quantity = data.quantity;
     };
 };
-
-module.exports = DoorDTO;

@@ -1,4 +1,4 @@
-class TypeDTO {
+export default class TypeDTO {
     constructor(data) {
         this.name = data.name;
         this.slug = data.slug;
@@ -7,5 +7,3 @@ class TypeDTO {
         this.casementQuantity = data.casementQuantity;
     };
 };
-
-module.exports = TypeDTO;

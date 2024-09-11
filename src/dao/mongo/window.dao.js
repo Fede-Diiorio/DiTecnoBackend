@@ -1,6 +1,6 @@
-const { Windows } = require('./models');
+import { Windows } from './models/index.js';
 
-class WindowDao {
+export default class WindowDao {
     async getOpenings() {
         return await Windows.find();
     };
@@ -22,5 +22,3 @@ class WindowDao {
         return null; // O maneja el caso en que no haya coincidencia
     };
 };
-
-module.exports = WindowDao;

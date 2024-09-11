@@ -1,6 +1,6 @@
-const { ColorRepository } = require('../repository/colors.repository');
+import ColorRepository from '../repository/colors.repository.js';
 
-class Controller {
+export default class Controller {
     #colorRepository;
 
     constructor() {
@@ -13,10 +13,7 @@ class Controller {
             res.json(colors);
         } catch (error) {
             res.status(error.status || 500).json(error || 'Error inesperado.');
-        }
+        };
 
-    }
-
+    };
 };
-
-module.exports = { Controller };

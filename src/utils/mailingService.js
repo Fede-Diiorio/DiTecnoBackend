@@ -1,8 +1,7 @@
-require('dotenv').config();
-const { CustomError } = require('./customErrors');
-const nodemailer = require('nodemailer');
+import 'dotenv/config'; // Reemplaza el require('dotenv').config()
+import CustomError from './customErrors.js';
 
-class MailingService {
+export default class MailingService {
     constructor() { }
 
     async sendMail(email, name, phone, cart) {
@@ -74,5 +73,3 @@ class MailingService {
         };
     };
 };
-
-module.exports = { MailingService };
