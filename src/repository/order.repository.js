@@ -39,6 +39,7 @@ export default class OrderRepository {
 
 
         await new MailingService().sendMail(email, name, phone, products);
+        await new MailingService().sendMailToUser(email);
         return userData;
     };
 };
