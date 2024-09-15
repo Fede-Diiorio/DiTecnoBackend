@@ -22,7 +22,6 @@ export default class OrderRepository {
             if (prod.product === 'ventana') {
                 const type = await this.#windowRepository.getTypeSpecification(prod.opening, prod.style, prod.type);
                 products.push(new WindowDTO(prod, type));
-                console.log(products)
             } else {
                 // const type = await this.#doorRepository.getTypeName(prod.opening, prod.type);
                 // products.push(new DoorDTO(prod, type));

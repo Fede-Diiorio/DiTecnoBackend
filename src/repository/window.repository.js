@@ -1,15 +1,13 @@
 import WindowDao from '../dao/mongo/window.dao.js';
-import ColorDao from '../dao/mongo/color.dao.js';
-import { OpeningsDTO, StylesDTO, TypeDTO, ColorOrDesignDTO } from '../dto/index.js'
+import { OpeningsDTO, StylesDTO, TypeDTO } from '../dto/index.js'
 import CustomError from '../utils/customErrors.js';
 
 export default class WindowRepository {
+
     #windowDao;
-    #colorDao;
 
     constructor() {
         this.#windowDao = new WindowDao();
-        this.#colorDao = new ColorDao();
     };
 
     async getOpenings() {

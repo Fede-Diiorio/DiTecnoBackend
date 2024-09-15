@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 
 // Routes
-import { WindowRouter, DoorRouter, OrderRouter, ColorRouter } from './routes/index.js'; // Asegúrate de que los archivos exporten correctamente
+import { WindowRouter, DoorRouter, OrderRouter, ColorRouter, SupportRouter } from './routes/index.js'; // Asegúrate de que los archivos exporten correctamente
 
 // Environment
 const port = process.env.PORT || 3000;
@@ -22,7 +22,8 @@ app.use(cors());
 app.use('/api/ventana', WindowRouter);
 app.use('/api/puerta', DoorRouter);
 app.use('/api/orden', OrderRouter);
-app.use('/api/colores', ColorRouter);
+app.use('/api/support', SupportRouter);
+app.use('/api/colores', ColorRouter); //Esto se eliminará en el futuro
 
 const main = async () => {
     try {

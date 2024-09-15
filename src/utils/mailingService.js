@@ -90,7 +90,7 @@ export default class MailingService {
             await transport.sendMail({
                 from: 'DiTecno Aberturas',
                 to: email,
-                subject: 'DiTecno Aberturas | Solicitud de Presupuesto',
+                subject: 'DiTecno Aberturas | Presupuesto enviado',
                 html: `Gracias por ponerse en contacto con DiTecno Aberturas. En breve nos estaremos comunicando con usted para informarle sobre el presupuesto solicitado.`
             });
 
@@ -106,4 +106,35 @@ export default class MailingService {
             });
         };
     };
+
+    async supportMail(message) {
+        try {
+            const transport = nodemailer.createTransport({
+                service: 'gmail',
+                port: 587,
+                auth: {
+                    user: process.env.MAIL,
+                    pass: process.env.MAIL_PASS
+                }
+            });
+
+            await transport.sendMail({
+                from: 'DiTecno Aberturas',
+                to: process.env.DEV_MAIL,
+                subject: 'DiTecno Aberturas | Reporte de errores',
+                html: message
+            });
+
+            return { message };
+
+        } catch (error) {
+            console.log(error);
+            throw CustomError.createError({
+                name: 'Error al enviar email',
+                cause: 'Ocurrió un error y no se pudo enviar el email al destinatario.',
+                message: 'No se pudo enviar el email',
+                status: 404
+            });
+        };
+    }
 };
