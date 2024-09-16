@@ -17,10 +17,10 @@ export default class Controller {
         };
     };
 
-    async getTypes(req, res) {
+    async getStyles(req, res) {
         try {
             const opening = req.params.opening;
-            const types = await this.#doorRepository.getTypes(opening);
+            const types = await this.#doorRepository.getStyles(opening);
             res.json(types);
         } catch (error) {
             res.status(error.status || 500).json(error || 'Error inesperado.');

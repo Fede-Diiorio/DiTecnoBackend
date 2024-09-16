@@ -1,7 +1,7 @@
 import DoorDao from '../dao/mongo/door.dao.js';
 import ColorDao from '../dao/mongo/color.dao.js';
 import DesignDao from '../dao/mongo/design.dao.js';
-import { OpeningsDTO, DoorTypeDTO, ColorOrDesignDTO } from '../dto/index.js';
+import { OpeningsDTO, DoorStyleDTO, ColorOrDesignDTO } from '../dto/index.js';
 import CustomError from '../utils/customErrors.js';
 
 export default class DoorRepository {
@@ -32,9 +32,9 @@ export default class DoorRepository {
         };
     };
 
-    async getTypes(opening) {
+    async getStyles(opening) {
         try {
-            const types = await this.#doorDao.getTypes(opening);
+            const types = await this.#doorDao.getStyles(opening);
 
             if (types.length === 0) {
                 throw CustomError.createError({
@@ -45,7 +45,7 @@ export default class DoorRepository {
                 });
             };
 
-            const typesPayload = new DoorTypeDTO(types[0]);
+            const typesPayload = new DoorStyleDTO(types[0]);
 
             if (!typesPayload || typesPayload.length === 0) {
                 throw CustomError.createError({
@@ -59,6 +59,7 @@ export default class DoorRepository {
             return typesPayload;
 
         } catch (error) {
+            console.log(error);
             throw CustomError.createError({
                 name: error.name || 'Error en tipo de aberturas.',
                 cause: error.cause || 'Ocurrió un error al procesar su solicitud y no se pudo cargar los datos de forma correcta.',

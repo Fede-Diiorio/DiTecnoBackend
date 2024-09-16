@@ -2,35 +2,281 @@
     {
         "name": "Apertura hacia adentro",
         "slug": "interior",
-        "type": [
+        "style": [
             {
                 "name": "Puerta simple",
-                "slug": "simple"
+                "slug": "simple",
+                "type": [
+                    {
+                        "name": "Puerta simple mano izquierda",
+                        "slug": "ps-mi",
+                        "image": "./imagen",
+                        "casementeQuantity": 1,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta simple mano derecha",
+                        "slug": "ps-md",
+                        "image": "./imagen",
+                        "casementeQuantity": 1,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta simple mano izquierda y ventana lateral",
+                        "slug": "ps-mi-vl",
+                        "image": "./imagen",
+                        "casementeQuantity": 2,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta simple mano derecha y ventana lateral",
+                        "slug": "ps-md-vl",
+                        "image": "./imagen",
+                        "casementeQuantity": 2,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta simple mano izquierda y ventanas laterales",
+                        "slug": "ps-mi-vls",
+                        "image": "./imagen",
+                        "casementeQuantity": 3,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta simple mano derecha y ventanas laterales",
+                        "slug": "ps-md-vls",
+                        "image": "./imagen",
+                        "casementeQuantity": 3,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta simple mano izquierda y ventana fija arriba",
+                        "slug": "ps-mi-vfa",
+                        "image": "./imagen",
+                        "casementeQuantity": 2,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta simple mano derecha y ventana fija arriba",
+                        "slug": "ps-md-vfa",
+                        "image": "./imagen",
+                        "casementeQuantity": 2,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta simple mano izquierda y ventana proyectante arriba",
+                        "slug": "ps-mi-vpa",
+                        "image": "./imagen",
+                        "casementeQuantity": 2,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta simple mano derecha y ventana proyectante arriba",
+                        "slug": "ps-md-vpa",
+                        "image": "./imagen",
+                        "casementeQuantity": 2,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta simple mano izquierda, ventana fija arriba y ventana lateral",
+                        "slug": "ps-mi-vfavl",
+                        "image": "./imagen",
+                        "casementeQuantity": 4,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta simple mano derecha, ventana fija arriba y ventana lateral",
+                        "slug": "ps-md-vfavl",
+                        "image": "./imagen",
+                        "casementeQuantity": 4,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta simple mano izquierda, ventana proyectante arriba y ventana lateral",
+                        "slug": "ps-mi-vpavl",
+                        "image": "./imagen",
+                        "casementeQuantity": 4,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta simple mano derecha, ventana proyectante arriba y ventana lateral",
+                        "slug": "ps-md-vpavl",
+                        "image": "./imagen",
+                        "casementeQuantity": 4,
+                        "design": []
+                    }
+                ]
             },
             {
                 "name": "Puerta doble",
-                "slug": "doble"
+                "slug": "doble",
+                "type": [
+                    {
+                        "name": "Puerta doble",
+                        "slug": "pd",
+                        "image": "./imagen",
+                        "casementeQuantity": 2,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta doble con ventanas laterales",
+                        "slug": "pd-vl",
+                        "image": "./imagen",
+                        "casementeQuantity": 4,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta doble con ventana fija arriba",
+                        "slug": "pd-vfa",
+                        "image": "./imagen",
+                        "casementeQuantity": 3,
+                        "design": []
+                    }
+                ]
             }
         ]
     },
     {
         "name": "Apertura hacia afuera",
         "slug": "exterior",
-        "type": [
+        "style": [
             {
                 "name": "Puerta simple",
-                "slug": "simple"
+                "slug": "simple",
+                "type": [
+                    {
+                        "name": "Puerta simple mano izquierda",
+                        "slug": "ps-mi",
+                        "image": "./imagen",
+                        "casementeQuantity": 1,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta simple mano derecha",
+                        "slug": "ps-md",
+                        "image": "./imagen",
+                        "casementeQuantity": 1,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta simple mano izquierda y ventana lateral",
+                        "slug": "ps-mi-vl",
+                        "image": "./imagen",
+                        "casementeQuantity": 2,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta simple mano derecha y ventana lateral",
+                        "slug": "ps-md-vl",
+                        "image": "./imagen",
+                        "casementeQuantity": 2,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta simple mano izquierda y ventanas laterales",
+                        "slug": "ps-mi-vls",
+                        "image": "./imagen",
+                        "casementeQuantity": 3,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta simple mano derecha y ventanas laterales",
+                        "slug": "ps-md-vls",
+                        "image": "./imagen",
+                        "casementeQuantity": 3,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta simple mano izquierda y ventana fija arriba",
+                        "slug": "ps-mi-vfa",
+                        "image": "./imagen",
+                        "casementeQuantity": 2,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta simple mano derecha y ventana fija arriba",
+                        "slug": "ps-md-vfa",
+                        "image": "./imagen",
+                        "casementeQuantity": 2,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta simple mano izquierda y ventana proyectante arriba",
+                        "slug": "ps-mi-vpa",
+                        "image": "./imagen",
+                        "casementeQuantity": 2,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta simple mano derecha y ventana proyectante arriba",
+                        "slug": "ps-md-vpa",
+                        "image": "./imagen",
+                        "casementeQuantity": 2,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta simple mano izquierda, ventana fija arriba y ventana lateral",
+                        "slug": "ps-mi-vfavl",
+                        "image": "./imagen",
+                        "casementeQuantity": 4,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta simple mano derecha, ventana fija arriba y ventana lateral",
+                        "slug": "ps-md-vfavl",
+                        "image": "./imagen",
+                        "casementeQuantity": 4,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta simple mano izquierda, ventana proyectante arriba y ventana lateral",
+                        "slug": "ps-mi-vpavl",
+                        "image": "./imagen",
+                        "casementeQuantity": 4,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta simple mano derecha, ventana proyectante arriba y ventana lateral",
+                        "slug": "ps-md-vpavl",
+                        "image": "./imagen",
+                        "casementeQuantity": 4,
+                        "design": []
+                    }
+                ]
             },
             {
                 "name": "Puerta doble",
-                "slug": "doble"
+                "slug": "doble",
+                "type": [
+                    {
+                        "name": "Puerta doble",
+                        "slug": "pd",
+                        "image": "./imagen",
+                        "casementeQuantity": 2,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta doble con ventanas laterales",
+                        "slug": "pd-vl",
+                        "image": "./imagen",
+                        "casementeQuantity": 4,
+                        "design": []
+                    },
+                    {
+                        "name": "Puerta doble con ventana fija arriba",
+                        "slug": "pd-vfa",
+                        "image": "./imagen",
+                        "casementeQuantity": 3,
+                        "design": []
+                    }
+                ]
             }
         ]
     },
     {
         "name": "Apertura Corrediza",
         "slug": "corrediza",
-        "type": [
+        "style": [
             {
                 "name": "Puerta doble",
                 "slug": "doble"

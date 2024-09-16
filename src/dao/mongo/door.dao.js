@@ -5,7 +5,7 @@ export default class DoorDao {
         return await Doors.find();
     };
 
-    async getTypes(opening) {
-        return await Doors.find({ slug: opening }, 'type');
+    async getStyles(opening) {
+        return await Doors.find({ slug: opening }, 'style');
     };
 };
