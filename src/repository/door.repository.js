@@ -1,7 +1,7 @@
 import DoorDao from '../dao/mongo/door.dao.js';
 import ColorDao from '../dao/mongo/color.dao.js';
 import DesignDao from '../dao/mongo/design.dao.js';
-import { OpeningsDTO, DoorStyleDTO, ColorOrDesignDTO } from '../dto/index.js';
+import { OpeningsDTO, DoorStyleDTO, ColorOrDesignDTO, TypeDTO, StylesDTO } from '../dto/index.js';
 import CustomError from '../utils/customErrors.js';
 
 export default class DoorRepository {
@@ -39,13 +39,49 @@ export default class DoorRepository {
             if (types.length === 0) {
                 throw CustomError.createError({
                     name: 'Parámetro inválido.',
-                    cause: 'Hubo un error al intentar procesar su solicitud porque el tipo de avertuna no existe.',
+                    cause: 'Hubo un error al intentar procesar su solicitud porque el tipo de abertura no existe.',
                     message: 'No existen tipos en el estilo de abertura solicitada',
                     status: 404
                 });
             };
 
             const typesPayload = new DoorStyleDTO(types[0]);
+
+            if (!typesPayload || typesPayload.length === 0) {
+                throw CustomError.createError({
+                    name: 'Error en la petición.',
+                    cause: 'Ocurrió un error al obtener los estilos, es posible que el tipo de abertura que buscas no exista.',
+                    message: 'No se pudo obtener ningún tipo de abertura de la base de datos.',
+                    status: 404
+                });
+            };
+
+            return typesPayload;
+
+        } catch (error) {
+            throw CustomError.createError({
+                name: error.name || 'Error en tipo de aberturas.',
+                cause: error.cause || 'Ocurrió un error al procesar su solicitud y no se pudo cargar los datos de forma correcta.',
+                message: error.message || 'La petición realizada no pudo ser completada debido a un error en la solicitud.',
+                status: error.status || 500
+            });
+        };
+    };
+
+    async getTypes(opening, style) {
+        try {
+            const types = await this.#doorDao.getTypes(opening, style);
+
+            if (types.length === 0) {
+                throw CustomError.createError({
+                    name: 'Parámetro inválido.',
+                    cause: 'Hubo un error al intentar procesar su solicitud porque el tipo de abertura no existe.',
+                    message: 'No existen tipos en el estilo de abertura solicitada',
+                    status: 404
+                });
+            };
+
+            const typesPayload = types.map(type => new TypeDTO(type));
 
             if (!typesPayload || typesPayload.length === 0) {
                 throw CustomError.createError({
@@ -83,7 +119,7 @@ export default class DoorRepository {
             if (!opening || !type) {
                 throw CustomError.createError({
                     name: 'Error en la petición.',
-                    cause: 'No proporcionó datos suficientes relacionados a la apertura, con lo que la operación no se puede concluir.',
+                    cause: 'No proporcionó datos suficientes relacionados a la abertura, con lo que la operación no se puede concluir.',
                     message: 'Debe incluir una abertura válida en la URL.',
                     status: 404
                 });
@@ -105,7 +141,7 @@ export default class DoorRepository {
             if (!designsPayload || designsPayload.length === 0) {
                 throw CustomError.createError({
                     name: 'Error en la petición.',
-                    cause: 'Ocurrió un error al obtener los diseños, es posible que el diseño de apertura que buscas no exista.',
+                    cause: 'Ocurrió un error al obtener los diseños, es posible que el diseño de abertura que buscas no exista.',
                     message: 'No se pudo obtener ningún diseño de abertura de la base de datos.',
                     status: 404
                 });
@@ -122,53 +158,4 @@ export default class DoorRepository {
             });
         };
     };
-
-    async getColors(opening, type, design) {
-        try {
-            if (!opening || !type || !design) {
-                throw CustomError.createError({
-                    name: 'Error en la petición.',
-                    cause: 'No proporcionó datos suficientes relacionados a la apertura, con lo que la operación no se puede concluir.',
-                    message: 'Debe incluir una abertura válida en la URL.',
-                    status: 404
-                });
-            };
-
-            const colors = await this.#colorDao.getColors();
-
-            if (colors.length === 0) {
-                throw CustomError.createError({
-                    name: 'Parámetro inválido.',
-                    cause: 'Hubo un error al intentar procesar su solicitud porque no se pudo acceder a los colores.',
-                    message: 'No existen colores para asignar a esta abertura.',
-                    status: 404
-                });
-            };
-
-            const colorsPayload = colors.map(color => new ColorOrDesignDTO(color));
-
-            if (!colorsPayload || colorsPayload.length === 0) {
-                throw CustomError.createError({
-                    name: 'Error en la petición.',
-                    cause: 'Ocurrió un error al obtener los colores, es posible que el color de apertura que buscas no exista.',
-                    message: 'No se pudo obtener ningún color de abertura de la base de datos.',
-                    status: 404
-                });
-            };
-
-            return colorsPayload;
-
-        } catch (error) {
-            throw CustomError.createError({
-                name: error.name || 'Error en tipo de aberturas.',
-                cause: error.cause || 'Ocurrió un error al procesar su solicitud y no se pudo cargar los datos de forma correcta.',
-                message: error.message || 'La petición realizada no pudo ser completada debido a un error en la solicitud.',
-                status: error.status || 500
-            });
-        };
-    };
-
-    generateDoor(opening, type, design, color, data) {
-        console.log(opening, type, design, color, data);
-    }
 };

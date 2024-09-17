@@ -33,7 +33,7 @@ export default class WindowRepository {
             if (styles.length === 0) {
                 throw CustomError.createError({
                     name: 'Parámetro inválido.',
-                    cause: 'Hubo un error al intentar procesar su solicitud porque el estilo de avertuna no existe.',
+                    cause: 'Hubo un error al intentar procesar su solicitud porque el estilo de abertura no existe.',
                     message: 'No existen estilos en la abertura solicitada',
                     status: 404
                 });
@@ -69,7 +69,7 @@ export default class WindowRepository {
             if (types.length === 0) {
                 throw CustomError.createError({
                     name: 'Parámetro inválido.',
-                    cause: 'Hubo un error al intentar procesar su solicitud porque el tipo de avertuna no existe.',
+                    cause: 'Hubo un error al intentar procesar su solicitud porque el tipo de abertura no existe.',
                     message: 'No existen tipos en el estilo de abertura solicitada',
                     status: 404
                 });

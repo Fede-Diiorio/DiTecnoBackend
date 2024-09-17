@@ -17,7 +17,7 @@ export default class WindowDao {
 
         if (window && window.style.length > 0) {
             return window.style[0].type; // Retorna el arreglo de tipos
-        }
+        };
 
         return null; // O maneja el caso en que no haya coincidencia
     };
