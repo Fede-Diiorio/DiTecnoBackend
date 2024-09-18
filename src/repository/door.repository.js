@@ -4,11 +4,9 @@ import CustomError from '../utils/customErrors.js';
 
 export default class DoorRepository {
     #doorDao;
-    #desingDao;
 
     constructor() {
         this.#doorDao = new DoorDao();
-        this.#desingDao = new DesignDao();
     };
 
     async getOpenings() {
@@ -30,9 +28,9 @@ export default class DoorRepository {
 
     async getStyles(opening) {
         try {
-            const types = await this.#doorDao.getStyles(opening);
+            const styles = await this.#doorDao.getStyles(opening);
 
-            if (types.length === 0) {
+            if (styles.length === 0) {
                 throw CustomError.createError({
                     name: 'Parámetro inválido.',
                     cause: 'Hubo un error al intentar procesar su solicitud porque el tipo de abertura no existe.',
@@ -41,9 +39,9 @@ export default class DoorRepository {
                 });
             };
 
-            const typesPayload = new DoorStyleDTO(types[0]);
+            const stylesPayload = new DoorStyleDTO(styles[0]);
 
-            if (!typesPayload || typesPayload.length === 0) {
+            if (!stylesPayload || stylesPayload.length === 0) {
                 throw CustomError.createError({
                     name: 'Error en la petición.',
                     cause: 'Ocurrió un error al obtener los estilos, es posible que el tipo de abertura que buscas no exista.',
@@ -52,7 +50,7 @@ export default class DoorRepository {
                 });
             };
 
-            return typesPayload;
+            return stylesPayload;
 
         } catch (error) {
             throw CustomError.createError({
@@ -110,9 +108,9 @@ export default class DoorRepository {
         };
     };
 
-    async getDesigns(opening, type) {
+    async getDesigns(opening, style, type) {
         try {
-            if (!opening || !type) {
+            if (!opening || !style || !type) {
                 throw CustomError.createError({
                     name: 'Error en la petición.',
                     cause: 'No proporcionó datos suficientes relacionados a la abertura, con lo que la operación no se puede concluir.',
@@ -121,7 +119,7 @@ export default class DoorRepository {
                 });
             };
 
-            const designs = await this.#desingDao.getDesigns();
+            const designs = await this.#doorDao.getDesigns(opening, style, type);
 
             if (designs.length === 0) {
                 throw CustomError.createError({
@@ -132,20 +130,23 @@ export default class DoorRepository {
                 });
             };
 
-            const designsPayload = designs.map(design => new ColorOrDesignDTO(design));
+            return designs;
 
-            if (!designsPayload || designsPayload.length === 0) {
-                throw CustomError.createError({
-                    name: 'Error en la petición.',
-                    cause: 'Ocurrió un error al obtener los diseños, es posible que el diseño de abertura que buscas no exista.',
-                    message: 'No se pudo obtener ningún diseño de abertura de la base de datos.',
-                    status: 404
-                });
-            };
+            // const designsPayload = designs.map(design => new ColorOrDesignDTO(design));
 
-            return designsPayload;
+            // if (!designsPayload || designsPayload.length === 0) {
+            //     throw CustomError.createError({
+            //         name: 'Error en la petición.',
+            //         cause: 'Ocurrió un error al obtener los diseños, es posible que el diseño de abertura que buscas no exista.',
+            //         message: 'No se pudo obtener ningún diseño de abertura de la base de datos.',
+            //         status: 404
+            //     });
+            // };
+
+            // return designsPayload;
 
         } catch (error) {
+            console.log(error);
             throw CustomError.createError({
                 name: error.name || 'Error en tipo de aberturas.',
                 cause: error.cause || 'Ocurrió un error al procesar su solicitud y no se pudo cargar los datos de forma correcta.',

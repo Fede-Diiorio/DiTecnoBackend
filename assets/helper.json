@@ -1,0 +1,126 @@
+[
+    {
+        "name": "Apertura hacia adentro",
+        "slug": "interior",
+        "style": [
+            {
+                "name": "Puerta simple",
+                "slug": "simple",
+                "type": [
+                    {
+                        "name": "Puerta simple mano izquierda",
+                        "slug": "ps-mi",
+                        "image": "./imagen",
+                        "casementeQuantity": 1,
+                        "design": [
+                            [
+                                {
+                                    "name": "Puerta simple diseño 1",
+                                    "slug": "design1",
+                                    "image": "https://static.vecteezy.com/system/resources/previews/014/901/728/original/external-door-icon-cartoon-home-exterior-vector.jpg"
+                                },
+                                {
+                                    "name": "Puerta simple diseño 2",
+                                    "slug": "design2",
+                                    "image": "https://static.vecteezy.com/system/resources/previews/014/901/728/original/external-door-icon-cartoon-home-exterior-vector.jpg"
+                                },
+                                {
+                                    "name": "Puerta simple diseño 3",
+                                    "slug": "design3",
+                                    "image": "https://static.vecteezy.com/system/resources/previews/014/901/728/original/external-door-icon-cartoon-home-exterior-vector.jpg"
+                                }
+                            ]
+                        ]
+                    },
+                    {
+                        "name": "Puerta simple mano derecha",
+                        "slug": "ps-md",
+                        "image": "./imagen",
+                        "casementeQuantity": 1,
+                        "design": [
+                            [
+                                {
+                                    "name": "Puerta simple diseño 1",
+                                    "slug": "design1",
+                                    "image": "https://static.vecteezy.com/system/resources/previews/014/901/728/original/external-door-icon-cartoon-home-exterior-vector.jpg"
+                                },
+                                {
+                                    "name": "Puerta simple diseño 2",
+                                    "slug": "design2",
+                                    "image": "https://static.vecteezy.com/system/resources/previews/014/901/728/original/external-door-icon-cartoon-home-exterior-vector.jpg"
+                                },
+                                {
+                                    "name": "Puerta simple diseño 3",
+                                    "slug": "design3",
+                                    "image": "https://static.vecteezy.com/system/resources/previews/014/901/728/original/external-door-icon-cartoon-home-exterior-vector.jpg"
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Apertura hacia adentro",
+        "slug": "exterior",
+        "style": [
+            {
+                "name": "Puerta simple",
+                "slug": "simple",
+                "type": [
+                    {
+                        "name": "Puerta simple mano izquierda",
+                        "slug": "ps-mi",
+                        "image": "./imagen",
+                        "casementeQuantity": 1,
+                        "design": [
+                            [
+                                {
+                                    "name": "Puerta simple diseño 1",
+                                    "slug": "design1",
+                                    "image": "https://static.vecteezy.com/system/resources/previews/014/901/728/original/external-door-icon-cartoon-home-exterior-vector.jpg"
+                                },
+                                {
+                                    "name": "Puerta simple diseño 2",
+                                    "slug": "design2",
+                                    "image": "https://static.vecteezy.com/system/resources/previews/014/901/728/original/external-door-icon-cartoon-home-exterior-vector.jpg"
+                                },
+                                {
+                                    "name": "Puerta simple diseño 3",
+                                    "slug": "design3",
+                                    "image": "https://static.vecteezy.com/system/resources/previews/014/901/728/original/external-door-icon-cartoon-home-exterior-vector.jpg"
+                                }
+                            ]
+                        ]
+                    },
+                    {
+                        "name": "Puerta simple mano derecha",
+                        "slug": "ps-md",
+                        "image": "./imagen",
+                        "casementeQuantity": 1,
+                        "design": [
+                            [
+                                {
+                                    "name": "Puerta simple diseño 1",
+                                    "slug": "design1",
+                                    "image": "https://static.vecteezy.com/system/resources/previews/014/901/728/original/external-door-icon-cartoon-home-exterior-vector.jpg"
+                                },
+                                {
+                                    "name": "Puerta simple diseño 2",
+                                    "slug": "design2",
+                                    "image": "https://static.vecteezy.com/system/resources/previews/014/901/728/original/external-door-icon-cartoon-home-exterior-vector.jpg"
+                                },
+                                {
+                                    "name": "Puerta simple diseño 3",
+                                    "slug": "design3",
+                                    "image": "https://static.vecteezy.com/system/resources/previews/014/901/728/original/external-door-icon-cartoon-home-exterior-vector.jpg"
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

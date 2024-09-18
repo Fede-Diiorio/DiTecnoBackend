@@ -37,4 +37,16 @@ export default class Controller {
             res.status(error.status || 500).json(error || 'Error inesperado.');
         };
     };
+
+    async getDesigns(req, res) {
+        try {
+            const opening = req.params.opening;
+            const style = req.params.style;
+            const type = req.params.type;
+            const designs = await this.#doorRepository.getDesigns(opening, style, type);
+            res.json(designs);
+        } catch (error) {
+            res.status(error.status || 500).json(error || 'Error inesperado.');
+        };
+    };
 };

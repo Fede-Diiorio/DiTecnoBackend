@@ -21,4 +21,34 @@ export default class DoorDao {
 
         return null;
     };
+
+    async getDesigns(opening, styleSlug, typeSlug) {
+        const door = await Doors.aggregate([
+            {
+                $match: { slug: opening } // Filtra por apertura (opening)
+            },
+            {
+                $unwind: "$style" // Descomponer el array de estilo
+            },
+            {
+                $match: { "style.slug": styleSlug } // Filtra por estilo (styleSlug)
+            },
+            {
+                $unwind: "$style.type" // Descomponer el array de tipo
+            },
+            {
+                $match: { "style.type.slug": typeSlug } // Filtra por tipo (typeSlug)
+            },
+            {
+                $project: { "style.type.design": 1 } // Proyecta solo el campo de diseño
+            }
+        ]);
+
+        if (door.length > 0 && door[0].style.type.design) {
+            return door[0].style.type.design; // Retorna el diseño encontrado
+        }
+
+        return null;
+    }
+
 };
