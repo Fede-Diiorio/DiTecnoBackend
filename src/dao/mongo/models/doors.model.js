@@ -5,7 +5,8 @@ const { Schema } = mongoose;
 // Esquema para el diseño (si planeas extenderlo más tarde)
 const DesignSchema = new Schema({
     name: { type: String, required: true },
-    slug: { type: String, required: true }
+    slug: { type: String, required: true },
+    image: { type: String, required: true }
     // Puedes agregar más campos para el diseño aquí si es necesario
 });
 

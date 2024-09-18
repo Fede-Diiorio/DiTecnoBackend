@@ -1,5 +1,4 @@
 import DoorDao from '../dao/mongo/door.dao.js';
-import DesignDao from '../dao/mongo/design.dao.js';
 import { OpeningsDTO, DoorStyleDTO, ColorOrDesignDTO, TypeDTO, StylesDTO } from '../dto/index.js';
 import CustomError from '../utils/customErrors.js';
 
