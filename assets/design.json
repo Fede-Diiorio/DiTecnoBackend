@@ -1,12 +1,17 @@
 [
     {
-        "name": "Cuadrados",
+        "name": "Puerta simple diseño 1",
         "slug": "design1",
-        "image": "https://drive.google.com/file/d/1iTAM3SSwqnTf8EWD-NIbobdyGH3-DpZO/view?usp=drive_link"
+        "image": "https://static.vecteezy.com/system/resources/previews/014/901/728/original/external-door-icon-cartoon-home-exterior-vector.jpg"
     },
     {
-        "name": "Liso",
-        "slug": "liso",
-        "image": "https://drive.google.com/file/d/1L-aoEdcZ5jxRLviz5GVvXh1JxgcjB6rO/view?usp=drive_link"
+        "name": "Puerta simple diseño 2",
+        "slug": "design2",
+        "image": "https://static.vecteezy.com/system/resources/previews/014/901/728/original/external-door-icon-cartoon-home-exterior-vector.jpg"
+    },
+    {
+        "name": "Puerta simple diseño 3",
+        "slug": "design3",
+        "image": "https://static.vecteezy.com/system/resources/previews/014/901/728/original/external-door-icon-cartoon-home-exterior-vector.jpg"
     }
 ]

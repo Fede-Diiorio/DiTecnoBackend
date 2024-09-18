@@ -1,17 +1,14 @@
 import DoorDao from '../dao/mongo/door.dao.js';
-import ColorDao from '../dao/mongo/color.dao.js';
 import DesignDao from '../dao/mongo/design.dao.js';
 import { OpeningsDTO, DoorStyleDTO, ColorOrDesignDTO, TypeDTO, StylesDTO } from '../dto/index.js';
 import CustomError from '../utils/customErrors.js';
 
 export default class DoorRepository {
     #doorDao;
-    #colorDao;
     #desingDao;
 
     constructor() {
         this.#doorDao = new DoorDao();
-        this.#colorDao = new ColorDao();
         this.#desingDao = new DesignDao();
     };
 
