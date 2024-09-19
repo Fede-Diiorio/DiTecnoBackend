@@ -1,5 +1,5 @@
 import DoorDao from '../dao/mongo/door.dao.js';
-import { OpeningsDTO, DoorStyleDTO, ColorOrDesignDTO, TypeDTO, StylesDTO } from '../dto/index.js';
+import { OpeningsDTO, DoorStyleDTO, TypeDTO, DesignDTO } from '../dto/index.js';
 import CustomError from '../utils/customErrors.js';
 
 export default class DoorRepository {
@@ -130,20 +130,18 @@ export default class DoorRepository {
                 });
             };
 
-            return designs;
+            const designsPayload = new DesignDTO(designs[0]);
 
-            // const designsPayload = designs.map(design => new ColorOrDesignDTO(design));
+            if (!designsPayload || designsPayload.length === 0) {
+                throw CustomError.createError({
+                    name: 'Error en la petición.',
+                    cause: 'Ocurrió un error al obtener los diseños, es posible que el diseño de abertura que buscas no exista.',
+                    message: 'No se pudo obtener ningún diseño de abertura de la base de datos.',
+                    status: 404
+                });
+            };
 
-            // if (!designsPayload || designsPayload.length === 0) {
-            //     throw CustomError.createError({
-            //         name: 'Error en la petición.',
-            //         cause: 'Ocurrió un error al obtener los diseños, es posible que el diseño de abertura que buscas no exista.',
-            //         message: 'No se pudo obtener ningún diseño de abertura de la base de datos.',
-            //         status: 404
-            //     });
-            // };
-
-            // return designsPayload;
+            return designsPayload;
 
         } catch (error) {
             console.log(error);

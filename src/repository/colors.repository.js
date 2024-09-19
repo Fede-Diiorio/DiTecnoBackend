@@ -1,5 +1,5 @@
 import ColorDao from '../dao/mongo/color.dao.js';
-import { ColorOrDesignDTO } from '../dto/index.js'
+import { ColorDTO } from '../dto/index.js'
 
 export default class ColorRepository {
 
@@ -12,7 +12,7 @@ export default class ColorRepository {
     async getColors() {
         try {
             const colors = await this.#colorDao.getColors();
-            const colorsPayload = colors.map(color => new ColorOrDesignDTO(color));
+            const colorsPayload = colors.map(color => new ColorDTO(color));
             return colorsPayload;
 
         } catch (error) {

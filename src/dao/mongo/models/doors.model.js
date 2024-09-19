@@ -15,7 +15,7 @@ const TypeSchema = new Schema({
     name: { type: String, required: true },
     slug: { type: String, required: true },
     image: { type: String, required: true },
-    casementeQuantity: { type: Number, required: true },
+    casementQuantity: { type: Number, required: true },
     design: [DesignSchema]  // Asumiendo que 'design' puede tener varios diseños
 });
 

@@ -40,15 +40,19 @@ export default class DoorDao {
                 $match: { "style.type.slug": typeSlug } // Filtra por tipo (typeSlug)
             },
             {
-                $project: { "style.type.design": 1 } // Proyecta solo el campo de diseño
+                $project: {
+                    "style.type.design": 1,  // Proyecta solo el campo de diseño
+                    "_id": 1  // Incluye explícitamente el _id
+                }
             }
         ]);
 
         if (door.length > 0 && door[0].style.type.design) {
             return door[0].style.type.design; // Retorna el diseño encontrado
-        }
+        };
 
         return null;
-    }
+
+    };
 
 };
