@@ -23,33 +23,30 @@ export default class DoorDao {
     };
 
     async getTypeSpecification(openingSlug, styleSlug, typeSlug) {
-        const door = await Doors.aggregate([
+        const door = await Doors.findOne(
             {
-                $match: { slug: openingSlug }
+                slug: openingSlug, // Filtra por la apertura (openingSlug)
+                "style.slug": styleSlug, // Filtra por el estilo (styleSlug)
+                "style.type.slug": typeSlug // Filtra por el tipo (typeSlug)
             },
             {
-                $unwind: "$style"
-            },
-            {
-                $match: { "style.slug": styleSlug }
-            },
-            {
-                $unwind: "$style.type"
-            },
-            {
-                $match: { "style.type.slug": typeSlug }
-            },
-            {
-                $project: {
-                    "style.type": 1
-                }
+                "style.$": 1 // Proyecta solo el array de estilos coincidente
             }
-        ]);
+        );
 
-        if (door.length > 0 && door[0].style.type) {
-            return door[0].style.type;
-        };
+        // Si se encontró el documento
+        if (door && door.style.length > 0) {
+            const matchingStyle = door.style[0];
+            // Busca el tipo específico dentro del estilo
+            const matchingType = matchingStyle.type.find(t => t.slug === typeSlug);
 
+            // Si se encuentra el tipo, lo devuelve
+            if (matchingType) {
+                return matchingType;
+            }
+        }
+
+        // Si no se encuentra el tipo, retorna null
         return null;
     };
 

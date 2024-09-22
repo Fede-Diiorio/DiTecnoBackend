@@ -1,5 +1,6 @@
 export default class DoorModelDTO {
     constructor(door, design) {
+        this.id = door._id;
         this.doorName = door.name;
         this.doorSlug = door.slug;
         this.doorImage = door.image;

@@ -165,13 +165,14 @@ export default class DoorRepository {
             };
 
             const doorType = await this.#doorDao.getTypeSpecification(opening, style, type);
+            console.log(doorType);
             const designSpec = await this.#doorDao.getDesignsSpecification(opening, style, type, design);
             const doorModel = new DoorModelDTO(doorType, designSpec);
 
             return doorModel;
 
         } catch (error) {
-            console.log(error)
+            console.log(error);
             throw CustomError.createError({
                 name: error.name || 'Error en tipo de aberturas.',
                 cause: error.cause || 'Ocurrió un error al procesar su solicitud y no se pudo cargar los datos de forma correcta.',
