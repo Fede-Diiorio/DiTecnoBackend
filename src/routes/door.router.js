@@ -11,4 +11,6 @@ router.get('/:opening/:style', (req, res) => new Controller().getTypes(req, res)
 
 router.get('/:opening/:style/:type', (req, res) => new Controller().getDesigns(req, res));
 
+router.get('/:opening/:style/:type/:design', (req, res) => new Controller().getDesignsSpecification(req, res));
+
 export default router;

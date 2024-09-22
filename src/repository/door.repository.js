@@ -144,7 +144,31 @@ export default class DoorRepository {
             return designsPayload;
 
         } catch (error) {
-            console.log(error);
+            throw CustomError.createError({
+                name: error.name || 'Error en tipo de aberturas.',
+                cause: error.cause || 'Ocurrió un error al procesar su solicitud y no se pudo cargar los datos de forma correcta.',
+                message: error.message || 'La petición realizada no pudo ser completada debido a un error en la solicitud.',
+                status: error.status || 500
+            });
+        };
+    };
+
+    async getDesignsSpecification(opening, style, type, design) {
+        try {
+            if (!opening || !style || !type || !design) {
+                throw CustomError.createError({
+                    name: 'Error en la petición.',
+                    cause: 'No proporcionó datos suficientes relacionados a la abertura, con lo que la operación no se puede concluir.',
+                    message: 'Debe incluir una abertura válida en la URL.',
+                    status: 404
+                });
+            };
+
+            const door = await this.#doorDao.getDesignsSpecification(opening, style, type, design);
+
+            return door
+
+        } catch (error) {
             throw CustomError.createError({
                 name: error.name || 'Error en tipo de aberturas.',
                 cause: error.cause || 'Ocurrió un error al procesar su solicitud y no se pudo cargar los datos de forma correcta.',
