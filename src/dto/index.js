@@ -6,6 +6,7 @@ import ColorDTO from './color.dto.js';
 import DoorDTO from './door.dto.js';
 import WindowDTO from './window.dto.js';
 import DesignDTO from './designs.dto.js';
+import DoorModelDTO from './doorModel.dto.js';
 
 export {
     OpeningsDTO,
@@ -16,4 +17,5 @@ export {
     DoorDTO,
     WindowDTO,
     DesignDTO,
+    DoorModelDTO
 };

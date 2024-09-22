@@ -22,6 +22,37 @@ export default class DoorDao {
         return null;
     };
 
+    async getTypeSpecification(openingSlug, styleSlug, typeSlug) {
+        const door = await Doors.aggregate([
+            {
+                $match: { slug: openingSlug }
+            },
+            {
+                $unwind: "$style"
+            },
+            {
+                $match: { "style.slug": styleSlug }
+            },
+            {
+                $unwind: "$style.type"
+            },
+            {
+                $match: { "style.type.slug": typeSlug }
+            },
+            {
+                $project: {
+                    "style.type": 1
+                }
+            }
+        ]);
+
+        if (door.length > 0 && door[0].style.type) {
+            return door[0].style.type;
+        };
+
+        return null;
+    };
+
     async getDesigns(opening, styleSlug, typeSlug) {
         const door = await Doors.aggregate([
             {
