@@ -66,7 +66,6 @@ export default class MailingService {
             return { email, name, phone };
 
         } catch (error) {
-            console.log(error);
             throw CustomError.createError({
                 name: 'Error al enviar email',
                 cause: 'Ocurrió un error y no se pudo enviar el email al destinatario.',
@@ -97,7 +96,6 @@ export default class MailingService {
             return { email };
 
         } catch (error) {
-            console.log(error);
             throw CustomError.createError({
                 name: 'Error al enviar email',
                 cause: 'Ocurrió un error y no se pudo enviar el email al destinatario.',
@@ -128,7 +126,6 @@ export default class MailingService {
             return { message };
 
         } catch (error) {
-            console.log(error);
             throw CustomError.createError({
                 name: 'Error al enviar email',
                 cause: 'Ocurrió un error y no se pudo enviar el email al destinatario.',
