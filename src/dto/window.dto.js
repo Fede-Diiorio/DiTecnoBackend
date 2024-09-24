@@ -2,7 +2,7 @@ export default class WindowDTO {
     constructor(data, type) {
         this.product = data.product;
         this.opening = data.opening;
-        this.type = type.image;
+        this.image = type.image;
         this.style = data.style;
         this.colors = data.colors;
         this.width = `${data.width} cm`;

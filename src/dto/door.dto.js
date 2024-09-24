@@ -1,14 +1,16 @@
 export default class DoorDTO {
     constructor(data, type) {
         this.product = data.product;
+        this.productName = type.name;
         this.opening = data.opening;
-        this.type = type;
+        this.image = type.image;
         this.design = data.design;
-        this.color = data.color;
+        this.colors = data.colors;
         this.width = `${data.width} cm`;
         this.height = `${data.height} cm`;
-        this.fixedWidth = data.fixedWidth ? `${data.fixedWidth} cm` : 'No requerido';
-        this.fixedHeight = data.fixedHeight ? `${data.fixedHeight} cm` : 'No requerido';
+        this.casement = data.casement ? `${data.casement} cm` : 'No requerido';
+        this.casement2 = data.casement2 ? `${data.casement2} cm` : 'No requerido';
+        this.casement3 = data.casement3 ? `${data.casement3} cm` : 'No requerido';
         this.quantity = data.quantity;
     };
 };

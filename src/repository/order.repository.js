@@ -15,30 +15,33 @@ export default class OrderRepository {
     }
 
     async generateOrder(name, email, phone, cart) {
+        try {
+            const products = [];
 
-        const products = [];
+            for (const prod of cart) {
+                if (prod.product === 'ventana') {
+                    const type = await this.#windowRepository.getTypeSpecification(prod.opening, prod.style, prod.type);
+                    products.push(new WindowDTO(prod, type));
+                } else {
+                    const type = await this.#doorRepository.getDesignsSpecification(prod.opening, prod.style, prod.type, prod.design);
+                    console.log(type);
+                    products.push(new DoorDTO(prod, type));
+                }
+            };
 
-        for (const prod of cart) {
-            if (prod.product === 'ventana') {
-                const type = await this.#windowRepository.getTypeSpecification(prod.opening, prod.style, prod.type);
-                products.push(new WindowDTO(prod, type));
-            } else {
-                // const type = await this.#doorRepository.getTypeName(prod.opening, prod.type);
-                // products.push(new DoorDTO(prod, type));
-                products.push('Puertas');
-            }
+            const userData = {
+                nombre: name,
+                email,
+                telefono: phone,
+                pedidos: products
+            };
+
+
+            await new MailingService().sendMail(email, name, phone, products);
+            await new MailingService().sendMailToUser(email);
+            return userData;
+        } catch (error) {
+            console.log(error);
         };
-
-        const userData = {
-            nombre: name,
-            email,
-            telefono: phone,
-            pedidos: products
-        };
-
-
-        await new MailingService().sendMail(email, name, phone, products);
-        await new MailingService().sendMailToUser(email);
-        return userData;
     };
 };

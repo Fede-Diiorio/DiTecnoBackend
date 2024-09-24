@@ -98,8 +98,8 @@ export default class DoorRepository {
         };
     };
 
-    async getTypeName(opening, type) {
-        const types = await this.getTypes(opening);
+    async getTypeName(opening, style, type) {
+        const types = await this.getTypes(opening, style);
         for (const typeName of types) {
             if (typeName.slug === type) {
                 return typeName.name;
