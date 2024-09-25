@@ -27,11 +27,14 @@ app.use('/api/colores', ColorRouter); //Esto se eliminará en el futuro
 
 const main = async () => {
     try {
+        if (!mongoUrl) {
+            throw new Error('MONGO_URL no está definida');
+        }
         await mongoose.connect(mongoUrl, { dbName });
-        console.log('Connected to MongoDB');
+        console.log('Conectado a MongoDB');
 
         app.listen(port, () => {
-            console.log(`Listening on ${port}`);
+            console.log(`Escuchando en el puerto ${port}`);
         });
     } catch (err) {
         console.error('Error al conectar a MongoDB: ', err);
