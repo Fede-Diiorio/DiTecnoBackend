@@ -16,7 +16,9 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors({
+    origin: 'https://ditecno.netlify.app/'
+}));
 
 // Endpoints
 app.use('/api/ventana', WindowRouter);
