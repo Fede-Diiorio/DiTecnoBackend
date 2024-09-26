@@ -16,9 +16,13 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({
-    origin: 'https://ditecno.netlify.app/'
-}));
+
+const corsOptions = {
+    origin: ['https://ditecno.netlify.app', 'http://localhost:5173'], // Permite ambos orígenes
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Permite los métodos que desees
+};
+
+app.use(cors(corsOptions));
 
 // Endpoints
 app.use('/api/ventana', WindowRouter);
