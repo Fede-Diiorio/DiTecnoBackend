@@ -82,7 +82,7 @@ export default class MailingService {
 
             await transport.sendMail({
                 from: 'DiTecno Aberturas',
-                to: process.env.MAIL_BOSS,
+                to: process.env.MAIL,
                 subject: 'DiTecno Aberturas | Solicitud de Presupuesto',
                 html: htmlContent,
             });
