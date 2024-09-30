@@ -9,37 +9,37 @@
                 "image": "/Practicable.gif",
                 "type": [
                     {
-                        "name": "Practicable mano izquierda",
+                        "name": "Practicable mano derecha",
                         "slug": "hs-mi",
                         "image": "https://i.imgur.com/X09wHig.jpeg",
                         "casementQuantity": 1
                     },
                     {
-                        "name": "Practicable mano izquierda + paño fijo lateral",
+                        "name": "Practicable mano derecha + paño fijo lateral",
                         "slug": "hd-mi",
                         "image": "https://i.imgur.com/T5JO0kY.jpeg",
                         "casementQuantity": 2
                     },
                     {
-                        "name": "Practicable mano izquierda + paño fijo inferior",
+                        "name": "Practicable mano derecha + paño fijo inferior",
                         "slug": "har-mi",
                         "image": "https://i.imgur.com/WPi0V4z.jpeg",
                         "casementQuantity": 2
                     },
                     {
-                        "name": "Practicable mano derecha",
+                        "name": "Practicable mano izquierda",
                         "slug": "hs-md",
                         "image": "https://i.imgur.com/pvaU3o8.jpeg",
                         "casementQuantity": 1
                     },
                     {
-                        "name": "Practicable mano derecha + paño fijo lateral",
+                        "name": "Practicable mano izquierda + paño fijo lateral",
                         "slug": "hi-md",
                         "image": "https://i.imgur.com/OZHEQRy.jpeg",
                         "casementQuantity": 2
                     },
                     {
-                        "name": "Practicable mano derecha + paño fijo inferior",
+                        "name": "Practicable mano izquierda + paño fijo inferior",
                         "slug": "har-md",
                         "image": "https://i.imgur.com/BeH0GcA.jpeg",
                         "casementQuantity": 2
@@ -52,37 +52,37 @@
                 "image": "/Oscilobatiente.gif",
                 "type": [
                     {
-                        "name": "Oscilobatiente mano izquierda",
+                        "name": "Oscilobatiente mano derecha",
                         "slug": "hs-mi",
                         "image": "https://i.imgur.com/JVoXxGv.jpeg",
                         "casementQuantity": 1
                     },
                     {
-                        "name": "Oscilobatiente mano izquierda + paño fijo lateral",
+                        "name": "Oscilobatiente mano derecha + paño fijo lateral",
                         "slug": "hd-mi",
                         "image": "https://i.imgur.com/fgPMx6A.jpeg",
                         "casementQuantity": 2
                     },
                     {
-                        "name": "Oscilobatiente mano izquierda + paño fijo inferior",
+                        "name": "Oscilobatiente mano derecha + paño fijo inferior",
                         "slug": "har-mi",
                         "image": "https://i.imgur.com/cnnAo7T.jpeg",
                         "casementQuantity": 2
                     },
                     {
-                        "name": "Oscilobatiente mano derecha",
+                        "name": "Oscilobatiente mano izquierda",
                         "slug": "hs-md",
                         "image": "https://i.imgur.com/nhtlsGz.jpeg",
                         "casementQuantity": 1
                     },
                     {
-                        "name": "Oscilobatiente mano derecha + paño fijo lateral",
+                        "name": "Oscilobatiente mano izquierda + paño fijo lateral",
                         "slug": "hi-md",
                         "image": "https://i.imgur.com/qDv87pL.jpeg",
                         "casementQuantity": 2
                     },
                     {
-                        "name": "Oscilobatiente mano derecha + paño fijo inferior",
+                        "name": "Oscilobatiente mano izquierda + paño fijo inferior",
                         "slug": "har-md",
                         "image": "https://i.imgur.com/nIrHba5.jpeg",
                         "casementQuantity": 2
@@ -101,13 +101,13 @@
                         "casementQuantity": 2
                     },
                     {
-                        "name": "Abatible + Paño fijo lateral",
+                        "name": "Abatible derecha + Paño fijo",
                         "slug": "abpfli",
                         "image": "https://i.imgur.com/3lrkjGg.png",
                         "casementQuantity": 2
                     },
                     {
-                        "name": "Abatible + Paño fijo lateral",
+                        "name": "Abatible izquierda + Paño fijo",
                         "slug": "abpfld",
                         "image": "https://i.imgur.com/yiioSY9.png",
                         "casementQuantity": 2
