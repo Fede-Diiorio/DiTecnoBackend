@@ -16,6 +16,7 @@ const TypeSchema = new Schema({
     slug: { type: String, required: true },
     image: { type: String, required: true },
     casementQuantity: { type: Number, required: true },
+    casementName: { type: String, required: true, default: "Medida de hoja [metros]" },
     design: [DesignSchema]  // Asumiendo que 'design' puede tener varios diseños
 });
 

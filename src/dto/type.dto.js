@@ -5,5 +5,6 @@ export default class TypeDTO {
         this.id = data._id;
         this.image = data.image;
         this.casementQuantity = data.casementQuantity;
+        this.casementName = data.casementName;
     };
 };
